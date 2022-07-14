@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/detailAddOwners"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="kz.putinbyte.iszhfermer.ui.offline.detail.OfflineOwnersDetailFragment"
+    tools:ignore="MissingConstraints">
+
+    <RelativeLayout
+        android:id="@+id/block"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/end"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/block">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/ownersDetailFullNameText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Идрисова Карлыгаш Ануарбековна" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/ownersAddListRec"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:paddingTop="@dimen/item_margin"
+                tools:listitem="@layout/item_animal_kindl"
+                app:layout_constraintBottom_toTopOf="@id/ownersDetailFullNameText"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/asteriskDetailOwners"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/ownersDetailDateEdit"
+                app:layout_constraintEnd_toStartOf="@+id/ownersDetailDateEdit"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/ownersDetailDateEdit" />
+
+            <kz.putinbyte.iszhfermer.ui.views.IszhEditDateCurrent
+                android:id="@+id/ownersDetailDateEdit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:textTitleDateNumber="Дата очистки данных" />
+
+            <androidx.constraintlayout.helper.widget.Flow
+                android:id="@+id/contCreateFlow"
+                style="@style/ISZHTheme.Flow"
+                android:paddingBottom="@dimen/item_margin"
+                app:constraint_referenced_ids="
+                ownersDetailFullNameText,
+                ownersAddListRec,
+                ownersDetailDateEdit"
+                app:flow_maxElementsWrap="1" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/end"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/screen_padding"
+        android:paddingEnd="@dimen/screen_padding"
+        android:paddingBottom="@dimen/screen_padding"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <Button
+            android:id="@+id/detailOwnersSaveButton"
+            style="@style/ISZHTheme.ButtonSelect"
+            android:text="@string/save_text_dis"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

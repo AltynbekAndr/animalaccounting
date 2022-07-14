@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="iszh_address_button">Адрес</string>
+    <string name="iszh_params_button">Технические характеристики контейнерной площадки</string>
+    <string name="iszh_containers_button">Емкости для отходов</string>
+    <string name="iszh_state_spinner">Эксплуатационный статус МНО</string>
+    <string name="iszh_owner_button">Собственник МНО</string>
+    <string name="iszh_operator_button">Оператор транспортировки</string>
+    <string name="iszh_schedule_button">График вывоза</string>
+    <string name="iszh_source_button">Источник образования отходов</string>
+    <string name="iszh_regional_button">Региональный оператор</string>
+    <string name="iszh_save_button">Сохранить</string>
+    <string name="iszh_upload_button">Подгрузить</string>
+    <string name="iszh_delete_button">Удалить</string>
+    <string name="iszh_edit_button">Редактировать</string>
+</resources>

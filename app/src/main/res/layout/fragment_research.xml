@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/addResearchFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="kz.putinbyte.iszhfermer.ui.research.create.ResearchFragment"
+    tools:ignore="MissingConstraints">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/asteriskResearchSickness"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/researchSicknessTypeSpinner"
+            app:layout_constraintEnd_toStartOf="@+id/researchSicknessTypeSpinner"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/researchSicknessTypeSpinner" />
+
+        <kz.putinbyte.iszhfermer.ui.views.IszhSpinner
+            android:id="@+id/researchSicknessTypeSpinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:textTitleSpinner="Заболевание" />
+
+        <TextView
+            android:id="@+id/asteriskResearchSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/researchTypeSpinner"
+            app:layout_constraintEnd_toStartOf="@+id/researchTypeSpinner"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/researchTypeSpinner" />
+
+        <kz.putinbyte.iszhfermer.ui.views.IszhSpinner
+            android:id="@+id/researchTypeSpinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:textTitleSpinner="Вид исследование" />
+
+        <TextView
+            android:id="@+id/asteriskResearchResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/researchResultTypeSpinner"
+            app:layout_constraintEnd_toStartOf="@+id/researchResultTypeSpinner"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/researchResultTypeSpinner" />
+
+        <kz.putinbyte.iszhfermer.ui.views.IszhSpinner
+            android:id="@+id/researchResultTypeSpinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:textTitleSpinner="Результат" />
+
+        <TextView
+            android:id="@+id/asteriskResearchDoctor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/researchDoctorTypeSpinner"
+            app:layout_constraintEnd_toStartOf="@+id/researchDoctorTypeSpinner"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/researchDoctorTypeSpinner" />
+
+        <kz.putinbyte.iszhfermer.ui.views.IszhSpinner
+            android:id="@+id/researchDoctorTypeSpinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:textTitleSpinner="Ветеринарный врач" />
+
+        <EditText
+            android:id="@+id/researchCommentEdit"
+            style="@style/ISZHTheme.EditText"
+            android:layout_width="0dp"
+            android:layout_marginTop="@dimen/top_screen_padding"
+            android:hint="@string/comment" />
+
+        <TextView
+            android:id="@+id/asteriskResearchDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/researchDateEdit"
+            app:layout_constraintEnd_toStartOf="@+id/researchDateEdit"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/researchDateEdit" />
+
+        <kz.putinbyte.iszhfermer.ui.views.IszhEditDateCurrent
+            android:id="@+id/researchDateEdit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:textTitleDateNumber="Дата" />
+
+        <Button
+            android:id="@+id/researchSaveButton"
+            style="@style/ISZHTheme.ButtonSelect"
+            android:text="@string/operator_save_button" />
+
+        <androidx.constraintlayout.helper.widget.Flow
+            style="@style/ISZHTheme.Flow"
+            android:orientation="horizontal"
+            app:constraint_referenced_ids="
+            researchSicknessTypeSpinner,
+            researchTypeSpinner,
+            researchResultTypeSpinner,
+            researchDoctorTypeSpinner,
+            researchCommentEdit,
+            researchDateEdit,
+            researchSaveButton"
+            app:flow_maxElementsWrap="1" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

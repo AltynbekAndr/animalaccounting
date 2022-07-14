@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="6dp"
+    android:background="@drawable/circle_primary_background_grey"
+    android:orientation="horizontal"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/instrumentsTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="4"
+        android:text="Море"
+        android:textColor="@color/ppkBlack"
+        android:textSize="16sp"
+        tools:ignore="HardcodedText" />
+
+    <EditText
+        android:id="@+id/instrumentsText"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="@dimen/item_margin"
+        android:layout_weight="1"
+        android:background="@drawable/circle_primary_background_grey"
+        android:padding="4dp"
+        android:inputType="number"
+        android:visibility="gone"
+        android:textAlignment="center"
+        android:textColor="@color/ppkBlack"
+        android:textSize="16sp"
+        tools:ignore="HardcodedText" />
+
+    <ImageView
+        android:id="@+id/instrumentsImageView"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:visibility="gone"
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/ic_selection_marker"/>
+
+
+</LinearLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+
+    <!-- PPK Colors -->
+    <color name="ppkPrimary">#2A0E5A</color>
+    <color name="ppkPrimaryHover">#51D3C7</color>
+    <color name="ppkPrimaryLight">#B1E5DE</color>
+    <color name="ppkPrimaryLightHover">#D8F2EF</color>
+
+    <color name="ppkSecondary">#08B7EB</color>
+    <color name="ppkSecondaryHover">#1E96D9</color>
+    <color name="ppkSecondaryLight">#9CE2F7</color>
+    <color name="ppkSecondaryLightHover">#E1F6FD</color>
+
+    <color name="ppkDanger">#982A09</color>
+    <color name="ppkDangerHover">#F04333</color>
+    <color name="ppkDangerLight">#FFDAD6</color>
+    <color name="ppkDangerLightHover">#FFB9B3</color>
+
+    <color name="ppkWarning">#FFBE4F</color>
+    <color name="ppkWarningHover">#FFA70F</color>
+    <color name="ppkWarningLight">#FFF1D9</color>
+    <color name="ppkWarningLightHover">#FFE0AA</color>
+
+    <color name="ppkSuccess">#3DCC79</color>
+    <color name="ppkSuccessHover">#30B668</color>
+    <color name="darkGreen">#1B5E20</color>
+    <color name="ppkSuccessLight">#DFF7E9</color>
+    <color name="ppkSuccessLightHover">#CBF1DB</color>
+
+    <color name="ppkGrey">#8D8D94</color>
+    <color name="ppkGreyHover">#BABBC2</color>
+    <color name="ppkGreyLight">#E6E6EB</color>
+    <color name="ppkGreyLightHover">#F0F0F0</color>
+
+
+    <color name="dialog_negative_button">#97021D</color>
+
+    <color name="ppkBlack">#0C0C0F</color>
+    <color name="ppkWhite">#ffffff</color>
+    <color name="ppkTransparent">#00000000</color>
+</resources>

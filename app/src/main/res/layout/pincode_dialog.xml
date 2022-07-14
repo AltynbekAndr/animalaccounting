@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/screen_padding">
+
+    <TextView
+        style="@style/ISZHTheme.TextTitle"
+        android:layout_gravity="center"
+        android:id="@+id/pin_code_title"
+        android:text="@string/pin_code_fragment_title_check"
+        android:textSize="@dimen/text_icon_size" />
+
+    <com.alimuzaffar.lib.pin.PinEntryEditText
+        android:id="@+id/pin_code_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:visibility="gone"
+        android:maxLength="4" />
+
+    <com.alimuzaffar.lib.pin.PinEntryEditText
+        android:id="@+id/repeat_pin_code_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:maxLength="4" />
+    <TextView
+        style="@style/ISZHTheme.TextTitle"
+        android:layout_gravity="center"
+        android:id="@+id/pin_validation_message"
+        android:text="@string/pin_code_fragment_count_try"
+        android:visibility="gone"
+        android:textSize="@dimen/text_size_items"/>
+    <Button
+        android:id="@+id/pin_code_button"
+        style="@style/ISZHTheme.ButtonSelect"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/item_margin"
+        android:text="@string/pin_code_fragment_button_check" />
+
+</LinearLayout>

@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/physicalFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="kz.putinbyte.iszhfermer.ui.individuals.physical.PhysicalListFragment"
+    tools:ignore="MissingConstraints">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content">
+
+        <kz.putinbyte.iszhfermer.ui.views.IszhSpinner
+            android:id="@+id/addOwnerTypeProperty"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:textTitleSpinner="@string/ao_typeProperty" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/asteriskOwnerINN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/innContainer"
+            app:layout_constraintEnd_toStartOf="@+id/innContainer"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/innContainer" />
+
+        <LinearLayout
+            android:id="@+id/innContainer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/addOwnerINN"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:background="@drawable/edt_bg"
+                android:hint="@string/ao_inn"
+                android:inputType="number"
+                android:paddingStart="@dimen/edit_padding_horizontal"
+                android:paddingTop="@dimen/box_padding_top"
+                android:paddingEnd="@dimen/edit_padding_horizontal"
+                android:paddingBottom="@dimen/box_padding_top" />
+
+            <kz.putinbyte.iszhfermer.ui.views.IconButton
+                android:id="@+id/iinFindButton"
+                style="@style/ISZHTheme.ButtonPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:background="@drawable/btn_danger_disabled"
+                android:enabled="false"
+                android:text="@string/icon_search" />
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/asteriskOwnerNameRu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/addOwnerNameRu"
+            app:layout_constraintEnd_toStartOf="@+id/addOwnerNameRu"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/addOwnerNameRu" />
+
+        <EditText
+            android:id="@+id/addOwnerNameRu"
+            style="@style/ISZHTheme.EditText"
+            android:hint="@string/ao_chiefFullName"
+            android:visibility="gone" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/asteriskOwnerLastName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/addOwnerLastName"
+            app:layout_constraintEnd_toStartOf="@+id/addOwnerLastName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/addOwnerLastName" />
+
+        <EditText
+            android:id="@+id/addOwnerLastName"
+            style="@style/ISZHTheme.EditText"
+            android:background="@drawable/bg_edit_disable"
+            android:hint="@string/ao_firstName" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/asteriskOwnerFirstName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/addOwnerFirstName"
+            app:layout_constraintEnd_toStartOf="@+id/addOwnerFirstName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/addOwnerFirstName" />
+
+        <EditText
+            android:id="@+id/addOwnerFirstName"
+            style="@style/ISZHTheme.EditText"
+            android:background="@drawable/bg_edit_disable"
+            android:hint="@string/ao_lastName" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/asteriskaOwnerMiddleName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/addOwnerMiddleName"
+            app:layout_constraintEnd_toStartOf="@+id/addOwnerMiddleName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/addOwnerMiddleName" />
+
+        <EditText
+            android:id="@+id/addOwnerMiddleName"
+            style="@style/ISZHTheme.EditText"
+            android:background="@drawable/bg_edit_disable"
+            android:hint="@string/ao_middleName" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/asteriskOwnerBirthDateEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/addOwnerBirthDateEdit"
+            app:layout_constraintEnd_toStartOf="@+id/addOwnerBirthDateEdit"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/addOwnerBirthDateEdit" />
+
+        <kz.putinbyte.iszhfermer.ui.views.IszhEditDateCurrent
+            android:id="@+id/addOwnerBirthDateEdit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:textTitleDateNumber="@string/ao_birthDate" />
+
+        <EditText
+            android:id="@+id/addOwnerEmail"
+            style="@style/ISZHTheme.EditText"
+            android:hint="@string/ao_email"
+            android:inputType="textEmailAddress" />
+
+        <EditText
+            android:id="@+id/addOwnerTel"
+            style="@style/ISZHTheme.EditText"
+            android:hint="@string/ao_tel"
+            android:inputType="phone" />
+
+        <EditText
+            android:id="@+id/addOwnerMobilePhone"
+            style="@style/ISZHTheme.EditText"
+            android:hint="@string/ao_mobilePhone"
+            android:inputType="phone" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/asteriskaOwnerDocumentNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/addOwnerDocumentNumber"
+            app:layout_constraintEnd_toStartOf="@+id/addOwnerDocumentNumber"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/addOwnerDocumentNumber" />
+
+        <EditText
+            android:id="@+id/addOwnerDocumentNumber"
+            style="@style/ISZHTheme.EditText"
+            android:hint="@string/ao_documentNumber" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/asteriskaOwnerDocumentDateIssue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/addOwnerDocumentDateIssue"
+            app:layout_constraintEnd_toStartOf="@+id/addOwnerDocumentDateIssue"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/addOwnerDocumentDateIssue" />
+
+        <kz.putinbyte.iszhfermer.ui.views.IszhEditDateCurrent
+            android:id="@+id/addOwnerDocumentDateIssue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:textTitleDateNumber="@string/ao_documentDateIssue" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/asteriskaOwnerDocumentIssueBy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/addOwnerDocumentIssueBy"
+            app:layout_constraintEnd_toStartOf="@+id/addOwnerDocumentIssueBy"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/addOwnerDocumentIssueBy" />
+
+        <EditText
+            android:id="@+id/addOwnerDocumentIssueBy"
+            style="@style/ISZHTheme.EditText"
+            android:hint="@string/ao_doumentIssueBy" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/asteriskOwnerKatoSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/addOwnerKatoId"
+            app:layout_constraintEnd_toStartOf="@+id/addOwnerKatoId"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/addOwnerKatoId" />
+
+        <TextView
+            android:id="@+id/addOwnerKatoId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_first_dropdown_text_view_text_v"
+            android:hint="@string/chooseRegion"
+            android:padding="12dp"
+            android:textColor="@color/ppkBlack"
+            android:textSize="18sp"
+            app:drawableTint="@color/ppkGrey" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/asteriskaOwnerCitizenshipId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/addOwnerCitizenshipId"
+            app:layout_constraintEnd_toStartOf="@+id/addOwnerCitizenshipId"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/addOwnerCitizenshipId" />
+
+        <kz.putinbyte.iszhfermer.ui.views.IszhSpinner
+            android:id="@+id/addOwnerCitizenshipId"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:textTitleSpinner="@string/ao_citizenshipId" />
+
+        <EditText
+            android:id="@+id/addOwnerPostIndex"
+            style="@style/ISZHTheme.EditText"
+            android:hint="@string/ao_postIndex" />
+
+        <EditText
+            android:id="@+id/addOwnerStreet"
+            style="@style/ISZHTheme.EditText"
+            android:hint="@string/ao_street" />
+
+        <EditText
+            android:id="@+id/addOwnerHouse"
+            style="@style/ISZHTheme.EditText"
+            android:hint="@string/ao_house" />
+
+        <EditText
+            android:id="@+id/addOwnerFlat"
+            style="@style/ISZHTheme.EditText"
+            android:hint="@string/ao_flat" />
+
+        <Button
+            android:id="@+id/physicalCreatesButton"
+            style="@style/ISZHTheme.ButtonSelect"
+            android:text="@string/saveTo" />
+
+        <androidx.constraintlayout.helper.widget.Flow
+            android:id="@+id/flow3"
+            style="@style/ISZHTheme.Flow"
+            android:orientation="horizontal"
+            app:constraint_referenced_ids="
+            addOwnerTypeProperty,
+            innContainer,
+            addOwnerNameRu,
+            addOwnerFirstName,
+            addOwnerLastName,
+            addOwnerMiddleName,
+            addOwnerBirthDateEdit,
+            addOwnerEmail,
+            addOwnerTel,
+            addOwnerMobilePhone,
+            addOwnerDocumentNumber,
+            addOwnerDocumentDateIssue,
+            addOwnerDocumentIssueBy,
+            addOwnerKatoId,
+            addOwnerCitizenshipId,
+            addOwnerPostIndex,
+            addOwnerStreet,
+            addOwnerHouse,
+            addOwnerFlat,
+            physicalCreatesButton"
+            app:flow_maxElementsWrap="1" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
+

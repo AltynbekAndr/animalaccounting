@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutSc"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/screen_padding">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/chooseOwners"
+        android:textColor="@color/ppkBlack"
+        android:textSize="20sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:padding="5dp">
+
+        <EditText
+            android:id="@+id/ownersFioEdit"
+            style="@style/ISZHTheme.EditText"
+            android:layout_width="match_parent"
+            android:layout_marginEnd="5dp"
+            android:layout_toStartOf="@+id/fioButtonSearch"
+            android:hint="@string/fio" />
+
+        <kz.putinbyte.iszhfermer.ui.views.IconButton
+            android:id="@+id/fioButtonSearch"
+            style="@style/ISZHTheme.ButtonPrimary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:text="@string/icon_search" />
+
+        <EditText
+            android:id="@+id/ownersIinEdit"
+            style="@style/ISZHTheme.EditText"
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/item_margin"
+            android:layout_marginEnd="5dp"
+            android:layout_toStartOf="@+id/fioButtonSearch"
+            android:layout_below="@+id/ownersFioEdit"
+            android:hint="@string/inn"
+            android:inputType="number" />
+
+        <kz.putinbyte.iszhfermer.ui.views.IconButton
+            android:id="@+id/innButtonSearch"
+            style="@style/ISZHTheme.ButtonPrimary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/item_margin"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/fioButtonSearch"
+            android:text="@string/icon_search" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/ownersRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>

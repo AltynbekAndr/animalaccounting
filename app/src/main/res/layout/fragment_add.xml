@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clAddAnimalFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="kz.putinbyte.iszhfermer.ui.add.AddAnimalFragment"
+    tools:ignore="MissingConstraints">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/asteriskRegistrySpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/addCauseRegistrySpinner"
+            app:layout_constraintEnd_toStartOf="@+id/addCauseRegistrySpinner"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/addCauseRegistrySpinner" />
+
+        <kz.putinbyte.iszhfermer.ui.views.IszhSpinner
+            android:id="@+id/addCauseRegistrySpinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:textTitleSpinner="Основание регистрации" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/asteriskAnimalKindSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/addAnimalKindSpinner"
+            app:layout_constraintEnd_toStartOf="@+id/addAnimalKindSpinner"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/addAnimalKindSpinner" />
+
+        <kz.putinbyte.iszhfermer.ui.views.IszhSpinner
+            android:id="@+id/addAnimalKindSpinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:textTitleSpinner="Вид животного" />
+
+        <kz.putinbyte.iszhfermer.ui.views.IszhSpinner
+            android:id="@+id/addMrsSpinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:textTitleSpinner="Выберите вид МРС" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/asteriskDirectionTypeSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/addDirectionTypeSpinner"
+            app:layout_constraintEnd_toStartOf="@+id/addDirectionTypeSpinner"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/addDirectionTypeSpinner" />
+
+        <kz.putinbyte.iszhfermer.ui.views.IszhSpinner
+            android:id="@+id/addDirectionTypeSpinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:textTitleSpinner="Направление" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/asteriskBreedTypeSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/addMastTypeSpinner"
+            app:layout_constraintEnd_toStartOf="@+id/addMastTypeSpinner"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/addMastTypeSpinner" />
+
+        <kz.putinbyte.iszhfermer.ui.views.IszhSpinner
+            android:id="@+id/addMastTypeSpinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:textTitleSpinner="Порода" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/asteriskIdentificationSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/addTypeIdentificationSpinner"
+            app:layout_constraintEnd_toStartOf="@+id/addTypeIdentificationSpinner"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/addTypeIdentificationSpinner" />
+
+        <kz.putinbyte.iszhfermer.ui.views.IszhSpinner
+            android:id="@+id/addTypeIdentificationSpinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:textTitleSpinner="Тип идентификации" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/asteriskInjNumberEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/addInjNumberEdit"
+            app:layout_constraintEnd_toStartOf="@+id/addInjNumberEdit"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/addInjNumberEdit" />
+
+        <EditText
+            android:id="@+id/addInjNumberEdit"
+            style="@style/ISZHTheme.EditText"
+            android:textAllCaps="true"
+            android:hint="@string/inj_full" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/asteriskCountrySpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/addCountrySpinner"
+            app:layout_constraintEnd_toStartOf="@+id/addCountrySpinner"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/addCountrySpinner" />
+
+        <kz.putinbyte.iszhfermer.ui.views.IszhSpinner
+            android:id="@+id/addCountrySpinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:textTitleSpinner="Страна происхождения" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/asteriskKatoSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/addKatoSpinner"
+            app:layout_constraintEnd_toStartOf="@+id/addKatoSpinner"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/addKatoSpinner" />
+
+        <kz.putinbyte.iszhfermer.ui.views.IszhSpinner
+            android:id="@+id/addKatoSpinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:textTitleSpinner="Регион" />
+
+        <EditText
+            android:id="@+id/addRadioNumberEdit"
+            style="@style/ISZHTheme.EditText"
+            android:hint="@string/numberRadio" />
+
+        <EditText
+            android:id="@+id/addInjMotherEdit"
+            style="@style/ISZHTheme.EditText"
+            android:textAllCaps="true"
+            android:hint="@string/motherInj"
+            android:inputType="textAutoComplete" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/asteriskGenderSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/addGenderSpinner"
+            app:layout_constraintEnd_toStartOf="@+id/addGenderSpinner"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/addGenderSpinner" />
+
+        <kz.putinbyte.iszhfermer.ui.views.IszhSpinner
+            android:id="@+id/addGenderSpinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:textTitleSpinner="Пол" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/asteriskBirthDateEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/addBirthDateEdit"
+            app:layout_constraintEnd_toStartOf="@+id/addBirthDateEdit"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/addBirthDateEdit" />
+
+        <kz.putinbyte.iszhfermer.ui.views.IszhEditDateCurrent
+            android:id="@+id/addBirthDateEdit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:textTitleDateNumber="Дата рождения" />
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/addGreenCheck"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/greenCorridor" />
+
+        <kz.putinbyte.iszhfermer.ui.views.IconButton
+            android:id="@+id/addUploadFileButton"
+            style="@style/ISZHTheme.ButtonPrimary"
+            android:layout_width="wrap_content"
+            android:layout_marginEnd="@dimen/screen_padding"
+            android:text="@string/icon_upload"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@id/addGreenCheck"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/addGreenCheck" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/asteriskGreenDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/addGreenDateEdit"
+            app:layout_constraintEnd_toStartOf="@+id/addGreenDateEdit"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/addGreenDateEdit" />
+
+        <kz.putinbyte.iszhfermer.ui.views.IszhEditDateCurrent
+            android:id="@+id/addGreenDateEdit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:textTitleDateNumber="Дата книги" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/asteriskGreenBookNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/addGreenBookEdit"
+            app:layout_constraintEnd_toStartOf="@+id/addGreenBookEdit"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/addGreenBookEdit" />
+
+        <EditText
+            android:id="@+id/addGreenBookEdit"
+            style="@style/ISZHTheme.EditText"
+            android:hint="@string/bookNumber"
+            android:inputType="number"
+            android:visibility="gone" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/asteriskGreenBookPage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/addGreenBookPageEdit"
+            app:layout_constraintEnd_toStartOf="@+id/addGreenBookPageEdit"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/addGreenBookPageEdit" />
+
+        <EditText
+            android:id="@+id/addGreenBookPageEdit"
+            style="@style/ISZHTheme.EditText"
+            android:hint="@string/NumberPage"
+            android:inputType="number"
+            android:visibility="gone" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/asteriskOwnerButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/addOwnerButton"
+            app:layout_constraintEnd_toStartOf="@+id/addOwnerButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/addOwnerButton" />
+
+        <TextView
+            android:id="@+id/addOwnerButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_first_dropdown_text_view_text_v"
+            android:hint="@string/chooseOwners"
+            android:padding="12dp"
+            android:textColor="@color/ppkBlack"
+            android:textSize="18sp"
+            app:drawableTint="@color/ppkGrey" />
+
+        <EditText
+            android:id="@+id/addOwnerOfflineButton"
+            style="@style/ISZHTheme.EditText"
+            android:hint="@string/inn"
+            android:inputType="number"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/addScannerButton"
+            style="@style/ISZHTheme.ButtonPrimary"
+            android:text="@string/scannerText" />
+
+        <Button
+            android:id="@+id/addSaveButton"
+            style="@style/ISZHTheme.ButtonSelect"
+            android:text="@string/iszh_save_button" />
+
+        <androidx.constraintlayout.helper.widget.Flow
+            style="@style/ISZHTheme.Flow"
+            android:orientation="horizontal"
+            app:constraint_referenced_ids="addCauseRegistrySpinner,
+                addAnimalKindSpinner,
+                addMrsSpinner,
+                addDirectionTypeSpinner,
+                addMastTypeSpinner,
+                addTypeIdentificationSpinner,
+                addInjNumberEdit,
+                addCountrySpinner,
+                addKatoSpinner,
+                addRadioNumberEdit,
+                addInjMotherEdit,
+                addGenderSpinner,
+                addBirthDateEdit,
+                addOwnerOfflineButton,
+                addOwnerButton,
+                addGreenCheck,
+                addGreenDateEdit,
+                addGreenBookEdit,
+                addGreenBookPageEdit,
+                addScannerButton,
+                addSaveButton"
+            app:flow_maxElementsWrap="1" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="kz.putinbyte.iszhfermer.ui.search.SearchFragment"
+    tools:ignore="MissingConstraints">
+
+    <EditText
+        android:id="@+id/searchInjEdit"
+        style="@style/ISZHTheme.EditText"
+        android:layout_width="match_parent"
+        android:hint="@string/inj" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/asteriskKato"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/searchKatoButton"
+        app:layout_constraintEnd_toStartOf="@+id/searchKatoButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/searchKatoButton" />
+
+    <TextView
+        android:id="@+id/searchKatoButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_first_dropdown_text_view_text_v"
+        android:hint="@string/chooseRegion"
+        android:padding="12dp"
+        android:textColor="@color/ppkBlack"
+        android:textSize="18sp"
+        app:drawableTint="@color/ppkGrey" />
+
+    <kz.putinbyte.iszhfermer.ui.views.IszhSpinner
+        android:id="@+id/searchAnimalKindSpinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:textTitleSpinner="Вид животного" />
+
+
+    <kz.putinbyte.iszhfermer.ui.views.IszhSpinner
+        android:id="@+id/searchStatusSpinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:textTitleSpinner="Статус" />
+
+    <TextView
+        android:id="@+id/searchOwnerButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_first_dropdown_text_view_text_v"
+        android:hint="@string/chooseOwners"
+        android:padding="12dp"
+        android:textColor="@color/ppkBlack"
+        android:textSize="18sp"
+        app:drawableTint="@color/ppkGrey" />
+
+    <Button
+        android:id="@+id/searchOkButton"
+        style="@style/ISZHTheme.ButtonSelect"
+        android:layout_marginStart="@dimen/screen_padding"
+        android:layout_marginTop="@dimen/item_margin"
+        android:layout_marginEnd="@dimen/item_margin"
+        android:text="@string/filter_ok"
+        app:layout_constraintEnd_toStartOf="@+id/searchShowButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchInjEdit" />
+
+    <kz.putinbyte.iszhfermer.ui.views.IconButton
+        android:id="@+id/searchShowButton"
+        style="@style/ISZHTheme.ButtonPrimary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/screen_padding"
+        android:text="@string/icon_hide"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/searchOkButton" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/searchScroller"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchOkButton"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent">
+
+        <LinearLayout
+            android:id="@+id/layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/searchListRec"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/screen_padding"
+                android:layout_marginEnd="@dimen/screen_padding"
+                android:layout_marginBottom="@dimen/item_margin"
+                android:clipToPadding="false"
+                android:paddingTop="@dimen/item_margin"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/searchOkButton"
+                tools:listitem="@layout/item_search" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/flow2"
+        style="@style/ISZHTheme.Flow"
+        android:orientation="horizontal"
+        app:constraint_referenced_ids="
+            searchKatoButton,
+            searchAnimalKindSpinner,
+            searchStatusSpinner,
+            searchOwnerButton,
+            searchInjEdit"
+        app:flow_maxElementsWrap="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

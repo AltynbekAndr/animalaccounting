@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="error_base">Произошла ошибка</string>
+    <string name="error_connection_failed">Нет подключения к интернету</string>
+    <string name="error_connection_timeout">Истекло время подключения к серверу. Пожалуйста, попробуйте еще раз.</string>
+    <string name="error_permission_denied">Необходимо дать приложению нужные разрешения</string>
+    <string name="error_authorization">Ошибка авторизации</string>
+    <string name="required_fields_error">Поле обязательно</string>
+    <string name="login_error_snackbar">Ошибка!</string>
+    <string name="login_error_snackbar_action">Подробнее</string>
+    <string name="login_error_dialog_title">Об ошибке</string>
+    <string name="login_error_dialog_negative">Закрыть</string>
+    <string name="login_error_dialog_positive">Отправить отчет</string>
+    <string name="scan_error_dialog_title">Ошибка! ИНЖ штрих код не опознан</string>
+</resources>

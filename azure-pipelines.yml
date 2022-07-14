@@ -1,0 +1,103 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- main
+
+pool:
+  #vmImage: ubuntu-latest
+  name: Reo Ubuntu
+stages:
+- stage: Test
+  jobs:
+  - job: mobile
+    pool:
+      vmImage: 'macos-latest'
+
+    steps:
+    - task: Gradle@2
+      inputs:
+        gradleWrapperFile: 'gradlew'
+        options: '-PserverUrl=http://iszh.test.reo.local/api/ -PauthUrl=https://id.test.reo.ru/ -PdadataUrl=https://dadata.ru/ -PdadataApiKey=67d05419e5f83521f81d171ca317f3c3e87a6baa  --stacktrace'
+        tasks: 'assembleRelease'
+        publishJUnitResults: false
+        javaHomeOption: 'JDKVersion'
+        gradleOptions: '-Xmx3072m'
+        sonarQubeRunAnalysis: false
+
+
+    - task: AndroidSigning@3
+      inputs:
+        apkFiles: '**/*.apk'
+        apksignerKeystoreFile: 'reo-upload-key.keystore'
+        apksignerKeystorePassword: '$(Key Password)'
+        apksignerKeystoreAlias: '$(Key alias)'
+        apksignerKeyPassword: '$(Key Password)'
+        zipalign: false
+
+    - task: PublishBuildArtifacts@1
+      inputs:
+        PathtoPublish: 'app/build/outputs/apk/release/app-release-unsigned.apk'
+        ArtifactName: 'test'
+        publishLocation: 'Container'
+
+- stage: Prod
+  jobs:
+  - job: mobile
+    pool:
+      vmImage: 'macos-latest'
+
+    steps:
+    - task: Gradle@2
+      inputs:
+        gradleWrapperFile: 'gradlew'
+        options: '-PserverUrl=https://iszh.reo.ru/api/ -PauthUrl=https://id.reo.ru/ -PdadataUrl=https://dadata.ru/ -PdadataApiKey=67d05419e5f83521f81d171ca317f3c3e87a6baa  --stacktrace'
+        tasks: 'assembleRelease'
+        publishJUnitResults: false
+        javaHomeOption: 'JDKVersion'
+        gradleOptions: '-Xmx3072m'
+        sonarQubeRunAnalysis: false
+
+
+    - task: AndroidSigning@3
+      inputs:
+        apkFiles: '**/*.apk'
+        apksignerKeystoreFile: 'reo-upload-key.keystore'
+        apksignerKeystorePassword: '$(Key Password)'
+        apksignerKeystoreAlias: '$(Key alias)'
+        apksignerKeyPassword: '$(Key Password)'
+        zipalign: false
+
+    - task: PublishBuildArtifacts@1
+      inputs:
+        PathtoPublish: 'app/build/outputs/apk/release/app-release-unsigned.apk'
+        ArtifactName: 'prod'
+        publishLocation: 'Container'
+      
+- stage: Deploy
+  dependsOn:
+  - Test
+  - Prod
+  condition: succeeded('Prod')
+  jobs:
+    - job: deploy
+      pool:
+       name: Reo_CD_Front
+      steps:
+        - task: DownloadBuildArtifacts@0
+          inputs:
+            buildType: 'current'
+            downloadType: 'single'
+            artifactName: 'test'
+            downloadPath: '/var/www/cdn/rt'
+            checkDownloadedFiles: true
+        - task: DownloadBuildArtifacts@0
+          inputs:
+            buildType: 'current'
+            downloadType: 'single'
+            artifactName: 'prod'
+            itemPattern: '**'
+            downloadPath: '/var/www/cdn/rt'
+            checkDownloadedFiles: true

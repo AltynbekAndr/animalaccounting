@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="filter_federal">Федеральный округ</string>
+    <string name="filter_rfsubject">Субъект РФ</string>
+    <string name="filter_okato">Код Направления</string>
+    <string name="filter_oktmo">Код Породы</string>
+    <string name="filter_cont_state">Статус емкости</string>
+    <string name="filter_cont_type">1</string>
+    <string name="filter_cont_count">1</string>
+    <string name="filter_source">1</string>
+    <string name="filter_category">Категория породы</string>
+
+    <string name="filter_ot">ц</string>
+    <string name="filter_do">До</string>
+    <string name="filter_count">Количество направленией</string>
+    <string name="filter_okato_code">Направление</string>
+    <string name="filter_oktmo_code">Порода</string>
+
+    <string name="filter_ok">Применить</string>
+    <string name="filter_clear">Очистить</string>
+
+</resources>

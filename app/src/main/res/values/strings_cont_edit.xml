@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="cont_edit_type_spinner">Вид животного</string>
+    <string name="cont_edit_volume_edit">Объем</string>
+    <string name="cont_edit_tko_count_edit">Количество</string>
+    <string name="cont_edit_length_edit">Длина</string>
+    <string name="cont_edit_width_edit">Ширина</string>
+    <string name="cont_edit_height_edit">Высота</string>
+    <string name="cont_edit_cont_type_spinner">Тип</string>
+    <string name="cont_edit_weight_edit">1</string>
+    <string name="cont_edit_state_spinner">2</string>
+    <string name="cont_edit_date_start_edit">4</string>
+    <string name="cont_edit_date_end_edit">5</string>
+    <string name="cont_edit_garbage_spinner">6</string>
+    <string name="cont_edit_trouble_switch">7</string>
+    <string name="cont_edit_comment_edit">8</string>
+    <string name="cont_edit_count_edit">9</string>
+
+    <string name="cont_edit_remove_button">Удалить</string>
+    <string name="cont_edit_make_photo_button">Сделать фото</string>
+</resources>

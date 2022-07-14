@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/fatteningList"
+    tools:context="kz.putinbyte.iszhfermer.ui.fattening.list.FatteningListFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/fatteningListRec"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:paddingTop="@dimen/item_margin"
+        tools:listitem="@layout/item_fattening"
+        app:layout_constraintBottom_toTopOf="@+id/listFatteningButton"
+        app:layout_constraintEnd_toEndOf="@+id/listFatteningButton"
+        app:layout_constraintStart_toStartOf="@+id/listFatteningButton"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/listFatteningButton"
+        style="@style/ISZHTheme.ButtonSelect"
+        android:layout_marginStart="@dimen/screen_padding"
+        android:layout_marginEnd="@dimen/screen_padding"
+        android:layout_marginBottom="@dimen/item_margin"
+        android:text="@string/add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

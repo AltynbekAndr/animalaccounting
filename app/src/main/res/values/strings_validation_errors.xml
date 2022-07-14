@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="pin_code_fragment_not_full">Pin-код должен быть из четырех цифр!</string>
+    <string name="pin_code_fragment_not_correct">Pin-код не правельный!</string>
+    <string name="pin_code_fragment_not_equals">Pin-коды не совпадает!</string>
+    <string name="pin_code_fragment_try_count_exhausted">Вы исчерпали лимит попыток ввода pin-кода!</string>
+</resources>

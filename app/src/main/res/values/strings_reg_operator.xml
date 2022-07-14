@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="regoperator_name_edit">Новый ИНЖ</string>
+    <string name="regoperator_inn_edit">Примечание</string>
+    <string name="regoperator_save_edit">Сохранить</string>
+    <string name="regoperator_add_edit">Добавить</string>
+</resources>

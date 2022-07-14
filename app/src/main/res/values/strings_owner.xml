@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="owner_search_edit">Масса животного</string>
+
+    <string name="owner_search_type">Миграция животного</string>
+    <string name="fattening_name_square">Наименование откорм площадки</string>
+
+    <string name="owner_save_button">Зарегистрировать</string>
+
+    <string name="current_about_import">Импорт:\n%s\n\nСтрана:\n%s
+    </string>
+
+    <string name="current_breeding">Племенное животное:\n%s
+    </string>
+
+    <string name="current_registration">Причина:\n%s\n\nКАТО:\n%s\n\nДата регистрации:\n%s\n\nВладелец:\n%s</string>
+
+    <string name="current_animal_about">Вид животного:\n%s\n\nСтерилизация:\n%s\n\nИНЖ матери:\n%s\n\nНаправление:\n%s\n\nДата рождения:\n%s\n\nРадио бирка:\n%s\n\nПорода:\n%s\n\nПол:\n%s</string>
+
+    <!--    Физлицо    -->
+    <string name="owner_fullname">
+        Полное наименование</string>
+    <string name="owner_inn">
+        ИНН</string>
+    <string name="owner_fio">
+        ФИО</string>
+    <string name="owner_reg_address">
+        Адрес регистрации по месту жительства</string>
+    <string name="owner_passport_num">
+        Номер паспорта</string>
+    <string name="owner_passport_serial">
+        Серия паспорта</string>
+    <string name="owner_passport_date">
+        Дата выдачи паспорта</string>
+    <string name="owner_email">
+        Электронная почта</string>
+    <string name="owner_phone">
+        Номер телефона</string>
+</resources>

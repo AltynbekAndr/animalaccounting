@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ao_lastName">Фамилия</string>
+    <string name="ao_inn">ИНН</string>
+    <string name="ao_firstName">Имя</string>
+    <string name="ao_middleName">Отчество</string>
+    <string name="ao_birthDate">Дата рождения</string>
+    <string name="ao_tel">Телефон</string>
+    <string name="ao_mobilePhone">Мобильный телефон</string>
+    <string name="ao_email">E-mail</string>
+    <string name="ao_documentNumber">Номер документа</string>
+    <string name="ao_documentDateIssue">Дата выдачи документа</string>
+    <string name="ao_doumentIssueBy">Документ выдан</string>
+    <string name="ao_citizenshipId">Страна владельца</string>
+    <string name="ao_typeProperty">Вид собственности</string>
+    <string name="ao_street">Наименование улицы</string>
+    <string name="ao_house">Номер дома</string>
+    <string name="ao_postIndex">Почтовый индекс</string>
+    <string name="ao_nameRu">ФИО руководителя</string>
+    <string name="ao_shortNameRu">Краткое наименование</string>
+    <string name="ao_opfId">Вид собственности</string>
+    <string name="ao_enterpriseTypeId">Тип предприятия</string>
+    <string name="ao_okedId">Вид производства</string>
+    <string name="ao_chiefFullName">Наименование</string>
+    <string name="ao_chiefPosition">Должность руководителя</string>
+    <string name="ao_okpoCode">Код ОКПО</string>
+    <string name="ao_flat">Номер квартиры</string>
+    <string name="ao_bik">БИК</string>
+    <string name="ao_bin">БИН</string>
+</resources>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="@dimen/item_margin"
+    android:orientation="vertical">
+
+    <hakobastvatsatryan.DropdownTextView
+        android:id="@+id/itemCanceledDropDownText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:arrow_drawable="@drawable/ic_arrow_"
+        app:bg_drawable_expanded="@drawable/bg_first_dropdown_text_view_expanded"
+        app:bg_drawable_regular="@drawable/bg_first_dropdown_text_view_regular"
+        app:content_padding="@dimen/button_roundness"
+        app:content_text_color="#ffffff"
+        app:content_text_size="@dimen/item_margin"
+        app:expand_duration="1"
+        app:link_text_color="#fff"
+        app:panel_padding="@dimen/item_margin"
+        app:title_text_color="#ffffff"
+        app:title_text_color_expanded="#ffffff"
+        app:title_text_size="@dimen/text_title_size" />
+
+</LinearLayout>

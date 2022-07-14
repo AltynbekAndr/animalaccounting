@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="cont_create_name_edit">Наименование</string>
+    <string name="cont_create_type_spinner">Порода</string>
+    <string name="cont_create_volume_edit">Чистый вес</string>
+    <string name="cont_create_tko_count_edit">Количество</string>
+    <string name="cont_create_length_edit">Длина (м)</string>
+    <string name="cont_create_width_edit">Ширина (м)</string>
+    <string name="cont_create_height_edit">Высота (м)</string>
+    <string name="cont_create_cont_type_spinner">Вид животного</string>
+    <string name="cont_create_weight_edit">1</string>
+    <string name="cont_create_state_spinner">2</string>
+    <string name="cont_create_date_start_edit">3</string>
+    <string name="cont_create_date_end_edit">4</string>
+    <string name="cont_create_garbage_spinner">5</string>
+    <string name="cont_create_trouble_switch">Импорт</string>
+    <string name="fattening_family_switch">Семейный откорм</string>
+    <string name="cont_create_comment_edit">7</string>
+    <string name="cont_create_count_edit">Количество</string>
+    <string name="cont_create_add_button">Добавить</string>
+    <string name="cont_create_make_photo_button">Сделать фото</string>
+    <string name="cont_alert_yes">Да</string>
+    <string name="cont_alert_no">Нет</string>
+    <string name="cont_alert_question">Вы уверены?</string>
+</resources>

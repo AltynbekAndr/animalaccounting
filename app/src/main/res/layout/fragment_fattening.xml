@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/fatteningFragment"
+    tools:context="kz.putinbyte.iszhfermer.ui.fattening.current.FatteningFragment"
+    tools:ignore="MissingConstraints">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/asteriskDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/fatteningDateEdit"
+            app:layout_constraintEnd_toStartOf="@+id/fatteningDateEdit"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/fatteningDateEdit" />
+
+        <kz.putinbyte.iszhfermer.ui.views.IszhEditDateCurrent
+            android:id="@+id/fatteningDateEdit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:textTitleDateNumber="Дата постановки" />
+
+        <TextView
+            android:id="@+id/asteriskSquare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/fatteningSquareSpinner"
+            app:layout_constraintEnd_toStartOf="@+id/fatteningSquareSpinner"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/fatteningSquareSpinner" />
+
+        <kz.putinbyte.iszhfermer.ui.views.IszhSpinner
+            android:id="@+id/fatteningSquareSpinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/item_margin"
+            app:textTitleSpinner="Откорм площадка" />
+
+        <kz.putinbyte.iszhfermer.ui.views.IszhSpinner
+            android:id="@+id/fatteningCountrySpinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/item_margin"
+            app:textTitleSpinner="Страна прибытия" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/fatteningImportSwitch"
+            style="@style/ISZHTheme.Switch"
+            android:layout_width="match_parent"
+            android:text="@string/cont_create_trouble_switch" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/fatteningFamilySwitch"
+            style="@style/ISZHTheme.Switch"
+            android:layout_width="match_parent"
+            android:text="@string/fattening_family_switch" />
+
+        <EditText
+            android:id="@+id/ownerWeightAnimalEdit"
+            style="@style/ISZHTheme.EditText"
+            android:layout_width="0dp"
+            android:layout_marginTop="@dimen/top_screen_padding"
+            android:hint="@string/owner_search_edit" />
+
+        <TextView
+            android:id="@+id/squareTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/ISZHTheme.TextTitle"
+            android:layout_marginBottom="@dimen/text_margin"
+            android:text="@string/animalsMigration"
+            app:layout_constraintStart_toStartOf="@+id/fatteningMigrationButton"
+            app:layout_constraintBottom_toTopOf="@+id/fatteningMigrationButton" />
+
+        <TextView
+            android:id="@+id/fatteningMigrationButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_first_dropdown_text_view_text_v"
+            android:hint="@string/chooseOrganization"
+            android:layout_marginTop="@dimen/spin_padding_end"
+            app:layout_constraintTop_toTopOf="parent"
+            android:padding="12dp"
+            android:textColor="@color/ppkBlack"
+            android:textSize="18sp"
+            app:drawableTint="@color/ppkGrey" />
+
+        <Button
+            android:id="@+id/fatteningSaveButton"
+            style="@style/ISZHTheme.ButtonSelect"
+            android:text="@string/owner_save_button" />
+
+        <androidx.constraintlayout.helper.widget.Flow
+            style="@style/ISZHTheme.Flow"
+            android:orientation="horizontal"
+            app:constraint_referenced_ids="
+            fatteningMigrationButton,
+            fatteningSquareSpinner,
+            fatteningCountrySpinner,
+            ownerWeightAnimalEdit,
+            fatteningDateEdit,
+            fatteningImportSwitch,
+            fatteningFamilySwitch,
+            fatteningSaveButton"
+            app:flow_maxElementsWrap="1"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

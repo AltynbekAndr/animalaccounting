@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="title_addresses">Наименование областей</string>
+    <string name="title_camera">Фотографии</string>
+    <string name="title_add_animals">Добавить животных</string>
+    <string name="title_container_create">Зарегистрировать болезнь</string>
+    <string name="title_container_edit">1: Редактирование</string>
+    <string name="title_iszh_current">Сведение о животных</string>
+    <string name="title_iszh_list">Список животных</string>
+    <string name="title_menu_animals">Меню Учет животных</string>
+    <string name="title_region">Наименование региона</string>
+    <string name="title_owners">Список владельцев</string>
+    <string name="title_schedule">График вывоза</string>
+    <string name="title_filters">Поиск животного</string>
+    <string name="title_deregister">Групповое снятие с учета</string>
+    <string name="title_rvl">Список животных РВЛ</string>
+
+    <string name="title_research_list">Исследование</string>
+    <string name="title_research">Добавить исследование</string>
+
+    <string name="title_diagnostic_list">Диагностическая оценка</string>
+    <string name="title_diagnostic">Добавить диагностическую оценку</string>
+
+    <string name="title_history_list">История</string>
+    <string name="title_history">Добавить историю</string>
+
+    <string name="title_fattening_list">Откорм</string>
+    <string name="title_fattening">Постановка откорма</string>
+
+    <string name="title_issuedInj_list">Выданные ИНЖ</string>
+    <string name="title_issuedInj">Заменить ИНЖ</string>
+
+    <string name="title_prevention_list">Профилактика</string>
+    <string name="title_prevention">Добавить профилактику</string>
+
+    <string name="title_sicknesses_list">Болезнь</string>
+    <string name="title_sicknesses">Добавить болезнь</string>
+    <string name="title_create_inventory">Создание описи</string>
+
+    <string name="title_deposit_list">Залог</string>
+    <string name="title_deposit">Оформление залога</string>
+
+    <string name="title_individ_list">Владельцы животных</string>
+
+    <string name="title_detail_owners">Детальное добавления данных</string>
+    <string name="title_list_owners_offline">Список владельцев</string>
+    <string name="title_edit_owners_offline">Редактирование</string>
+</resources>

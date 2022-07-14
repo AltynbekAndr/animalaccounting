@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/iszhBackgroundContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/text_margin"
+    android:background="@drawable/box_grey_selector"
+    android:padding="@dimen/screen_padding">
+
+    <TextView
+        android:id="@+id/searchInjText"
+        style="@style/ISZHTheme.TextTitle"
+        android:layout_width="0dp"
+        android:textSize="@dimen/text_size"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="КРС - ИНЖ: KZC 122334456" />
+
+    <TextView
+        android:id="@+id/searchBreedText"
+        style="@style/ISZHTheme.TextTitle"
+        android:layout_width="0dp"
+        android:layout_marginTop="@dimen/text_margin"
+        android:layout_marginEnd="@dimen/item_margin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/searchInjText"
+        tools:text="Красная прибалтийская" />
+
+    <TextView
+        android:id="@+id/searchGenderText"
+        style="@style/ISZHTheme.TextTitle"
+        android:layout_width="0dp"
+        android:layout_marginTop="@dimen/text_margin"
+        app:layout_constraintStart_toStartOf="@+id/searchBreedText"
+        app:layout_constraintTop_toBottomOf="@+id/searchBreedText"
+        tools:text="Пол - Самец" />
+
+    <TextView
+        android:id="@+id/searchBirthdayText"
+        style="@style/ISZHTheme.TextTitle"
+        android:layout_width="0dp"
+        android:layout_marginTop="@dimen/text_margin"
+        app:layout_constraintStart_toStartOf="@+id/searchGenderText"
+        app:layout_constraintTop_toBottomOf="@+id/searchGenderText"
+        tools:text="Др - 15.05.2020 / 1г.12м" />
+
+    <TextView
+        android:id="@+id/searchOwnerText"
+        style="@style/ISZHTheme.TextTitle"
+        android:layout_width="0dp"
+        android:layout_marginTop="@dimen/text_margin"
+        app:layout_constraintStart_toStartOf="@+id/searchGenderText"
+        app:layout_constraintTop_toBottomOf="@+id/searchBirthdayText"
+        tools:text="Идрисова Карлыгаш Ануарбековна" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/itemDateView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:id="@+id/itemDateCurrentText"
+        style="@style/ISZHTheme.TextTitle"
+        app:layout_constraintEnd_toStartOf="@+id/itemDateButton"
+        app:layout_constraintStart_toStartOf="@+id/itemDateView"
+        app:layout_constraintTop_toTopOf="@+id/itemDateView"
+        android:fontFamily="sans-serif-medium"
+        android:layout_marginStart="@dimen/screen_padding"
+        android:textColor="@color/ppkBlack"
+        tools:text="@string/app_sample_text" />
+
+    <TextView
+        android:id="@+id/itemDateEdit"
+        style="@style/ISZHTheme.Text"
+        android:textColor="@color/ppkBlack"
+        android:textStyle="bold"
+        android:layout_marginStart="@dimen/screen_padding"
+        app:layout_constraintBottom_toBottomOf="@id/itemDateButton"
+        app:layout_constraintEnd_toStartOf="@+id/itemDateButton"
+        app:layout_constraintStart_toStartOf="@+id/itemDateView"
+        app:layout_constraintTop_toBottomOf="@id/itemDateCurrentText" />
+
+    <kz.putinbyte.iszhfermer.ui.views.IconButton
+        android:id="@+id/itemDateButton"
+        style="@style/ISZHTheme.ButtonPrimary"
+        android:text="@string/icon_calendar"
+        android:layout_width="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/itemDateCurrentText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="kz.putinbyte.iszhfermer.ui.mainFragment.MainFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btn_administration"
+            style="@style/ISZHTheme.ButtonPrimary"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="@dimen/screen_padding"
+            android:layout_marginTop="@dimen/item_margin"
+            android:layout_marginEnd="@dimen/screen_padding"
+            android:padding="@dimen/button_min_width"
+            android:text="@string/administration"
+            android:textSize="@dimen/text_size"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn_count_animals"
+            style="@style/ISZHTheme.ButtonPrimary"
+            android:layout_marginTop="@dimen/item_margin"
+            android:padding="@dimen/button_min_width"
+            android:text="@string/animal_counting"
+            android:textSize="@dimen/text_size"
+            android:layout_marginBottom="@dimen/item_margin"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/btn_administration"
+            app:layout_constraintEnd_toEndOf="@+id/btn_administration"
+            app:layout_constraintTop_toBottomOf="@id/btn_administration" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/text_margin"
+    android:paddingTop="10dp"
+    android:paddingEnd="@dimen/box_padding"
+    android:paddingStart="@dimen/box_padding"
+    android:paddingBottom="@dimen/box_padding"
+    android:background="@drawable/box_grey_selector">
+
+    <TextView
+        android:id="@+id/owners_name"
+        style="@style/ISZHTheme.TextTitle"
+        tools:text="Жумабаева Райхангул Маликовна"
+        android:textSize="@dimen/text_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/owners_krs"
+        style="@style/ISZHTheme.Text"
+        android:layout_width="0dp"
+        android:text="@string/krs"
+        android:layout_marginTop="@dimen/item_margin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/owners_name" />
+
+    <TextView
+        android:id="@+id/owners_krsText"
+        style="@style/ISZHTheme.TextTitle"
+        android:layout_width="0dp"
+        android:layout_marginStart="28sp"
+        app:layout_constraintStart_toEndOf="@+id/owners_krs"
+        app:layout_constraintTop_toTopOf="@+id/owners_krs"
+        tools:text="33333" />
+
+    <TextView
+        android:id="@+id/owners_camels"
+        style="@style/ISZHTheme.Text"
+        android:layout_marginEnd="@dimen/button_min_width"
+        android:text="@string/camels"
+        app:layout_constraintEnd_toStartOf="@+id/owners_camelsText"
+        app:layout_constraintStart_toStartOf="@+id/owners_oneHoofed"
+        app:layout_constraintTop_toTopOf="@id/owners_krs" />
+
+    <TextView
+        android:id="@+id/owners_camelsText"
+        style="@style/ISZHTheme.TextTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/owners_camels"
+        tools:text="1223" />
+
+    <TextView
+        android:id="@+id/owners_pork"
+        style="@style/ISZHTheme.Text"
+        android:text="@string/porks"
+        app:layout_constraintStart_toStartOf="@+id/owners_camels"
+        app:layout_constraintTop_toTopOf="@id/owners_horses" />
+
+    <TextView
+        android:id="@+id/owners_porkText"
+        style="@style/ISZHTheme.TextTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/owners_pork"
+        tools:text="3444" />
+
+    <TextView
+        android:id="@+id/owners_oneHoofed"
+        style="@style/ISZHTheme.Text"
+        android:layout_marginEnd="@dimen/text_margin"
+        android:text="@string/oneHoofed"
+        app:layout_constraintStart_toStartOf="@+id/owners_camels"
+        app:layout_constraintTop_toTopOf="@id/owners_mrs" />
+
+    <TextView
+        android:id="@+id/owners_oneHoofedText"
+        style="@style/ISZHTheme.TextTitle"
+        android:layout_marginStart="@dimen/text_margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/owners_oneHoofed"
+        app:layout_constraintTop_toTopOf="@id/owners_oneHoofed"
+        tools:text="344442" />
+
+    <TextView
+        android:id="@+id/owners_horses"
+        style="@style/ISZHTheme.Text"
+        android:layout_width="0dp"
+        android:layout_marginTop="@dimen/text_margin"
+        android:text="@string/horses"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/owners_krs" />
+
+    <TextView
+        android:id="@+id/owners_horsesText"
+        style="@style/ISZHTheme.TextTitle"
+        android:layout_width="0dp"
+        app:layout_constraintStart_toStartOf="@+id/owners_krsText"
+        app:layout_constraintTop_toTopOf="@+id/owners_horses"
+        tools:text="333333" />
+
+    <TextView
+        android:id="@+id/owners_mrs"
+        style="@style/ISZHTheme.Text"
+        android:layout_width="0dp"
+        android:layout_marginTop="@dimen/text_margin"
+        android:text="@string/mrs"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/owners_horses" />
+
+    <TextView
+        android:id="@+id/owners_mrsText"
+        style="@style/ISZHTheme.TextTitle"
+        android:layout_width="0dp"
+        app:layout_constraintStart_toStartOf="@+id/owners_krsText"
+        app:layout_constraintTop_toTopOf="@+id/owners_mrs"
+        tools:text="5555" />
+
+    <Button
+        android:id="@+id/owners_animalListButton"
+        style="@style/ISZHTheme.ButtonPrimary"
+        android:layout_marginTop="@dimen/item_margin"
+        android:text="@string/animals_list"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/owners_mrs" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

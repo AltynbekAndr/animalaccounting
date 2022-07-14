@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="schedule_state_spinner">Статус графика</string>
+    <string name="schedule_type_spinner">фв</string>
+    <string name="schedule_time_start">фа: %s</string>
+    <string name="schedule_time_end">фа: %s</string>
+</resources>

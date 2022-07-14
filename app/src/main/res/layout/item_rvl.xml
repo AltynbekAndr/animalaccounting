@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rvlBackgroundContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/item_margin"
+    android:orientation="horizontal">
+
+    <hakobastvatsatryan.DropdownTextView
+        android:id="@+id/first_dropdown_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:title_text_color="#ffffff"
+        app:title_text_color_expanded="#ffffff"
+        app:title_text_size="@dimen/text_title_size"
+        app:content_padding="@dimen/button_roundness"
+        app:content_text_color="#ffffff"
+        app:content_text_size="@dimen/item_margin"
+        app:link_text_color="#fff"
+        android:layout_weight="1"
+        app:arrow_drawable="@drawable/ic_arrow_"
+        app:bg_drawable_regular="@drawable/bg_first_dropdown_text_view_regular"
+        app:bg_drawable_expanded="@drawable/bg_first_dropdown_text_view_expanded"
+        app:expand_duration="1"
+        app:panel_padding="@dimen/item_margin"/>
+
+    <CheckBox
+        android:id="@+id/checkRvlBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"/>
+
+</LinearLayout>

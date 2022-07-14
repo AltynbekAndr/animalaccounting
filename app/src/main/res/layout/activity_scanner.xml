@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/clScannerActivity"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="kz.putinbyte.iszhfermer.ui.scanner.ScannerActivity">
+
+    <com.budiyev.android.codescanner.CodeScannerView
+        android:id="@+id/scanner_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:autoFocusButtonColor="@android:color/white"
+        app:autoFocusButtonVisible="true"
+        app:flashButtonColor="@android:color/white"
+        app:flashButtonVisible="true"
+        app:frameColor="@android:color/white"
+        app:maskColor="#77000000" />
+
+<!--    <kz.putinbyte.iszhfermer.ui.views.IconButton-->
+<!--        android:id="@+id/sendToFragmentButton"-->
+<!--        style="@style/ISZHTheme.ButtonPrimary"-->
+<!--        android:layout_width="@dimen/img_size"-->
+<!--        android:layout_height="@dimen/img_size"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_marginBottom="@dimen/box_padding"-->
+<!--        android:textSize="@dimen/text_icon_size"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        app:layout_constraintHorizontal_chainStyle="packed" />-->
+
+</RelativeLayout>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/unRegisterFragment"
+    tools:context="kz.putinbyte.iszhfermer.ui.unregister.UnregisterFragment"
+    tools:ignore="MissingConstraints">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <kz.putinbyte.iszhfermer.ui.views.IszhSpinner
+            android:id="@+id/unregisterCauseSpinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:textTitleSpinner="Выберите причину" />
+
+        <kz.putinbyte.iszhfermer.ui.views.IszhSpinner
+            android:id="@+id/unregisterSicknessSpinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:textTitleSpinner="Выберите болезнь" />
+
+        <TextView
+            android:id="@+id/unregisterKatoButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_first_dropdown_text_view_text_v"
+            android:hint="@string/mogrations"
+            android:padding="12dp"
+            android:visibility="gone"
+            android:textColor="@color/ppkBlack"
+            android:textSize="18sp"
+            app:drawableTint="@color/ppkGrey" />
+
+        <TextView
+            android:id="@+id/unregisterOwnerButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_first_dropdown_text_view_text_v"
+            android:hint="@string/nextOwner"
+            android:padding="12dp"
+            android:visibility="gone"
+            android:textColor="@color/ppkBlack"
+            android:textSize="18sp"
+            app:drawableTint="@color/ppkGrey" />
+
+        <EditText
+            android:id="@+id/unregisterCommentEdit"
+            style="@style/ISZHTheme.EditText"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:hint="@string/commit" />
+
+        <kz.putinbyte.iszhfermer.ui.views.IszhEditDateCurrent
+            android:id="@+id/unregisterDateEdit"
+            android:layout_width="0dp"
+            android:visibility="gone"
+            android:layout_height="wrap_content"
+            app:textTitleDateNumber="Дата" />
+
+        <EditText
+            android:id="@+id/unregisterCauseCommentEdit"
+            style="@style/ISZHTheme.EditText"
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:hint="@string/killingPlace" />
+
+        <Button
+            android:id="@+id/unregisterChooseFileButton"
+            style="@style/ISZHTheme.ButtonPrimary"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/item_margin"
+            android:text="@string/chooseFile" />
+
+        <Button
+            android:id="@+id/searchOkButton"
+            style="@style/ISZHTheme.ButtonSelect"
+            android:layout_width="0dp"
+            android:layout_marginStart="@dimen/item_margin"
+            android:text="@string/access" />
+
+        <androidx.constraintlayout.helper.widget.Flow
+            style="@style/ISZHTheme.Flow"
+            android:orientation="horizontal"
+            app:constraint_referenced_ids="
+            unregisterCauseSpinner,
+            unregisterKatoButton,
+            unregisterOwnerButton,
+            unregisterSicknessSpinner,
+            unregisterCommentEdit,
+            unregisterDateEdit,
+            unregisterCauseCommentEdit,
+            unregisterChooseFileButton,
+            searchOkButton"
+            app:flow_maxElementsWrap="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

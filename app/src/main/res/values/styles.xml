@@ -1,0 +1,175 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Global -->
+    <style name="ISZHTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="textAllCaps">false</item>
+        <item name="colorAccent">@color/ppkPrimary</item>
+        <item name="android:statusBarColor" tools:targetApi="m">@color/ppkPrimary</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>>
+    </style>
+
+    <!-- Buttons -->
+    <style name="ISZHTheme.ButtonPrimary" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/btn_primary_selector</item>
+        <item name="android:minWidth">@dimen/button_min_width</item>
+        <item name="android:paddingStart">@dimen/button_padding_horizontal</item>
+        <item name="android:paddingEnd">@dimen/button_padding_horizontal</item>
+        <item name="android:textColor">@color/ppkWhite</item>
+    </style>
+
+    <!-- CardView -->
+    <style name="ISZHTheme.CardPrimary" parent="CardView">
+        <item name="android:background">@drawable/btn_primary_selector</item>
+    </style>
+
+    <style name="ISZHTheme.ButtonDanger" parent="ISZHTheme.ButtonPrimary">
+        <item name="android:background">@drawable/btn_danger_selector</item>
+    </style>
+
+    <style name="DialogTheme" parent="ThemeOverlay.MaterialComponents.MaterialAlertDialog">
+        <item name="buttonBarNegativeButtonStyle">@style/AlertNegativeButton</item>
+    </style>
+
+    <style name="AlertNegativeButton" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:textColor">@color/dialog_negative_button</item>
+    </style>
+
+    <style name="ISZHTheme.ButtonWhite" parent="ISZHTheme.ButtonPrimary">
+        <item name="android:background">@drawable/btn_white_selector</item>
+        <item name="android:textColor">@color/ppkWhite</item>
+    </style>
+
+    <style name="ISZHTheme.ButtonSelect" parent="ISZHTheme.ButtonPrimary">
+        <item name="android:background">@drawable/btn_green_selector</item>
+        <item name="android:textColor">@color/ppkWhite</item>
+    </style>
+
+    <style name="ISZHTheme.ButtonGrey" parent="ISZHTheme.ButtonPrimary">
+        <item name="android:background">@drawable/box_grey</item>
+        <item name="android:textColor">@color/ppkBlack</item>
+    </style>
+
+    <!-- Texts -->
+    <style name="ISZHTheme.Text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/ppkGrey</item>
+    </style>
+
+    <style name="ISZHTheme.TextTitle" parent="ISZHTheme.Text">
+        <item name="android:textSize">@dimen/text_title_size</item>
+        <item name="android:textColor">@color/ppkBlack</item>
+    </style>
+
+    <style name="ISZHTheme.TextBadgeSuccess" parent="ISZHTheme.Text">
+        <item name="android:background">@drawable/badge_success</item>
+        <item name="android:textColor">@color/ppkWhite</item>
+        <item name="android:paddingStart">@dimen/text_badge_padding_horizontal</item>
+        <item name="android:paddingEnd">@dimen/text_badge_padding_horizontal</item>
+        <item name="android:paddingTop">@dimen/text_badge_padding_vertical</item>
+        <item name="android:paddingBottom">@dimen/text_badge_padding_vertical</item>
+    </style>
+
+    <style name="ISZHTheme.TextBadgeDanger" parent="ISZHTheme.TextBadgeSuccess">
+        <item name="android:background">@drawable/badge_danger</item>
+    </style>
+
+    <!-- Edit Texts -->
+    <style name="ISZHTheme.EditText" parent="Widget.AppCompat.EditText">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingStart">@dimen/edit_padding_horizontal</item>
+        <item name="android:paddingTop">@dimen/edit_padding_vertical</item>
+        <item name="android:paddingBottom">@dimen/edit_padding_vertical</item>
+        <item name="android:paddingEnd">@dimen/edit_padding_horizontal</item>
+        <item name="android:background">@drawable/edt_bg</item>
+        <item name="android:minHeight">@dimen/edit_min_height</item>
+        <item name="android:minWidth">@dimen/edit_min_height</item>
+    </style>
+
+    <!-- Images -->
+    <style name="ISZHTheme.Image">
+        <item name="android:background">@drawable/box_grey</item>
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/img_roundness</item>
+        <item name="android:layout_width">@dimen/img_size</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="layout_constraintDimensionRatio">W,1:1</item>
+    </style>
+
+    <!-- Boxes -->
+    <style name="ISZHTheme.BoxGrey">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:background">@drawable/box_grey_selector</item>
+    </style>
+
+    <!-- Spinners -->
+    <style name="ISZHTheme.Spinner" parent="Widget.AppCompat.Spinner">
+        <item name="android:paddingEnd">@dimen/spin_padding_end</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/spinner_bg</item>
+        <item name="android:minHeight">@dimen/spin_min_height</item>
+    </style>
+
+    <!-- Switches -->
+    <style name="ISZHTheme.Switch">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/text_title_size</item>
+        <item name="android:thumb">@drawable/ic_thumb</item>
+        <item name="track">@drawable/track_bg</item>
+    </style>
+
+    <!-- Flow -->
+    <style name="ISZHTheme.Flow">
+        <item name="android:paddingEnd">@dimen/screen_padding</item>
+        <item name="android:paddingStart">@dimen/screen_padding</item>
+        <item name="android:paddingBottom">@dimen/screen_padding</item>
+        <item name="android:paddingTop">@dimen/item_margin</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="flow_wrapMode">chain</item>
+        <item name="flow_verticalAlign">bottom</item>
+        <item name="flow_horizontalStyle">spread_inside</item>
+        <item name="flow_verticalStyle">spread_inside</item>
+        <item name="flow_horizontalGap">@dimen/item_margin</item>
+        <item name="flow_verticalGap">@dimen/item_margin</item>
+        <item name="layout_constraintEnd_toEndOf">parent</item>
+        <item name="layout_constraintStart_toStartOf">parent</item>
+        <item name="layout_constraintTop_toTopOf">parent</item>
+    </style>
+
+    <!-- AlertDialog -->
+    <style name="PPKTheme.Alert" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="background">@color/ppkPrimary</item>
+        <item name="android:windowBackground">@drawable/box_grey</item>
+        <item name="dialogCornerRadius">16dp</item>
+    </style>
+
+    <style name="AppModalStyle"
+        parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/rounded_dialog</item>
+        <item name="behavior_peekHeight">@dimen/bottom_sheet_height</item>
+    </style>
+
+    <!-- BottomSheetDialog -->
+    <style name="AppBottomSheetDialogTheme"
+        parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="bottomSheetStyle">@style/AppModalStyle</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowSoftInputMode">adjustResize|stateVisible</item>
+    </style>
+
+    <!-- AppBar -->
+    <style name="Theme.Iszh.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.Iszh.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+</resources>

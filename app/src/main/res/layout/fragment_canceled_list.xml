@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/canceledFragment"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:scrollbars="none"
+    tools:context="kz.putinbyte.iszhfermer.ui.diagnostic.canceled.CanceledListFragment"
+    tools:ignore="MissingConstraints">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/canceledListRec"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:paddingTop="@dimen/item_margin"
+        android:layout_marginEnd="@dimen/screen_padding"
+        android:layout_marginStart="@dimen/screen_padding"
+        tools:listitem="@layout/item_fattening"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

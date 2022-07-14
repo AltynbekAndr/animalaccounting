@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/addSicknessFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    tools:context="kz.putinbyte.iszhfermer.ui.sicknesses.current.SicknessesFragment"
+    tools:ignore="MissingConstraints">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/asteriskSicknessFirstSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/sicknessFirstDiagnosticTypeSpinner"
+            app:layout_constraintEnd_toStartOf="@+id/sicknessFirstDiagnosticTypeSpinner"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/sicknessFirstDiagnosticTypeSpinner" />
+
+        <kz.putinbyte.iszhfermer.ui.views.IszhSpinner
+            android:id="@+id/sicknessFirstDiagnosticTypeSpinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:textTitleSpinner="Первоначальный диагноз" />
+
+        <TextView
+            android:id="@+id/asteriskSicknessConclusionSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/sicknessConclusionTypeSpinner"
+            app:layout_constraintEnd_toStartOf="@+id/sicknessConclusionTypeSpinner"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/sicknessConclusionTypeSpinner" />
+
+        <kz.putinbyte.iszhfermer.ui.views.IszhSpinner
+            android:id="@+id/sicknessConclusionTypeSpinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:textTitleSpinner="Исход" />
+
+        <TextView
+            android:id="@+id/asteriskSicknessDoctorSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/sicknessDoctorTypeSpinner"
+            app:layout_constraintEnd_toStartOf="@+id/sicknessDoctorTypeSpinner"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/sicknessDoctorTypeSpinner" />
+
+        <kz.putinbyte.iszhfermer.ui.views.IszhSpinner
+            android:id="@+id/sicknessDoctorTypeSpinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:textTitleSpinner="Ветеринарный врач" />
+
+        <TextView
+            android:id="@+id/asteriskSicknessDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/sicknessDateEdit"
+            app:layout_constraintEnd_toStartOf="@+id/sicknessDateEdit"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/sicknessDateEdit" />
+
+        <kz.putinbyte.iszhfermer.ui.views.IszhEditDateCurrent
+            android:id="@+id/sicknessDateEdit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:textTitleDateNumber="Дата" />
+
+        <EditText
+            android:id="@+id/sicknessCommentEdit"
+            style="@style/ISZHTheme.EditText"
+            android:layout_width="match_parent"
+            android:hint="@string/comment"
+            android:maxLines="48"
+            android:singleLine="false" />
+
+        <Button
+            android:id="@+id/sicknessSaveButton"
+            style="@style/ISZHTheme.ButtonSelect"
+            android:text="@string/iszh_save_button" />
+
+        <androidx.constraintlayout.helper.widget.Flow
+            android:id="@+id/contCreateFlow"
+            style="@style/ISZHTheme.Flow"
+            android:paddingBottom="@dimen/item_margin"
+            app:constraint_referenced_ids="
+            sicknessFirstDiagnosticTypeSpinner,
+            sicknessConclusionTypeSpinner,
+            sicknessDoctorTypeSpinner,
+            sicknessDateEdit,
+            sicknessCommentEdit,
+            sicknessSaveButton"
+            app:flow_maxElementsWrap="1" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

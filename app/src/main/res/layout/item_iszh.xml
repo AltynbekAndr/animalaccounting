@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/iszhBackgroundContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/text_margin"
+    android:background="@drawable/box_grey_selector"
+    android:padding="@dimen/screen_padding">
+
+    <TextView
+        android:id="@+id/iszhInjText"
+        style="@style/ISZHTheme.TextTitle"
+        android:layout_width="0dp"
+        tools:text="КРС - ИНЖ: KZC 122334456"
+        android:textSize="@dimen/text_size"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/iszhBreedText"
+        style="@style/ISZHTheme.TextTitle"
+        android:layout_width="0dp"
+        android:layout_marginTop="@dimen/text_margin"
+        android:layout_marginEnd="@dimen/item_margin"
+        tools:text="Красная прибалтийская"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iszhInjText" />
+
+    <TextView
+        android:id="@+id/iszhGenderText"
+        style="@style/ISZHTheme.TextTitle"
+        android:layout_width="0dp"
+        android:layout_marginTop="@dimen/text_margin"
+        tools:text="Пол - Самец"
+        app:layout_constraintStart_toStartOf="@+id/iszhBreedText"
+        app:layout_constraintTop_toBottomOf="@+id/iszhBreedText" />
+
+    <TextView
+        android:id="@+id/iszhBirthdayText"
+        style="@style/ISZHTheme.TextTitle"
+        android:layout_width="0dp"
+        android:layout_marginTop="@dimen/text_margin"
+        tools:text="Др - 15.05.2020 / 1г.12м"
+        app:layout_constraintStart_toStartOf="@+id/iszhGenderText"
+        app:layout_constraintTop_toBottomOf="@+id/iszhGenderText" />
+
+    <Button
+        android:id="@+id/iszhDetailButton"
+        style="@style/ISZHTheme.ButtonPrimary"
+        android:layout_marginTop="@dimen/item_margin"
+        android:text="@string/openDetail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iszhBirthdayText" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

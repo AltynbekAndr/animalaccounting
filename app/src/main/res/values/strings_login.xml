@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="login_sign_in_button">Войти</string>
+    <string name="login_email_edit">Почта</string>
+    <string name="login_pass_edit">Пароль</string>
+    <string name="logOut_dialog_title">Выход из приложения</string>
+    <string name="logOut_dialog_message">Вы уверены, что хотите выйти из аккаунта?\n\nВсе неотправленные данные будут удалены.</string>
+    <string name="logOut_dialog_yes">Выйти</string>
+    <string name="logOut_dialog_cancel">Отмена</string>
+</resources>

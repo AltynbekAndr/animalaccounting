@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="pin_code_fragment_title_check">Введите pin-код</string>
+    <string name="pin_code_fragment_title_save">Создайте pin-код</string>
+
+    <string name="pin_code_fragment_button_check">Войти</string>
+    <string name="pin_code_fragment_button_save">Сохранить</string>
+
+    <string name="pin_code_fragment_count_try">Осталось попыток: %s</string>
+</resources>

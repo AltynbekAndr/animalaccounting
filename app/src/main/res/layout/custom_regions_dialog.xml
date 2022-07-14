@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutSc"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/screen_padding">
+
+    <kz.putinbyte.iszhfermer.ui.views.IconButton
+        android:id="@+id/regionsBackButton"
+        style="@style/ISZHTheme.ButtonPrimary"
+        android:layout_width="wrap_content"
+        android:text="@string/icon_angle_left" />
+
+    <TextView
+        android:id="@+id/regionsMainTitle"
+        style="@style/ISZHTheme.TextTitle"
+        android:layout_alignTop="@+id/regionsBackButton"
+        android:layout_alignBottom="@+id/regionsBackButton"
+        android:layout_toEndOf="@+id/regionsBackButton"
+        android:gravity="center_vertical"
+        android:layout_marginStart="@dimen/item_margin"
+        tools:text="@string/app_sample_text" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/regionsMainTitle"
+        android:orientation="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/regionsRec"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/top_screen_padding"
+            android:clipToPadding="false"
+            tools:listitem="@layout/item_custom_regions" />
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/region_progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_centerInParent="true" />
+
+</RelativeLayout>

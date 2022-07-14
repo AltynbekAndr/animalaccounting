@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginBottom="@dimen/item_margin">
+
+    <hakobastvatsatryan.DropdownTextView
+        android:id="@+id/itemDepositDropDownText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title_text_color="#ffffff"
+        app:title_text_color_expanded="#ffffff"
+        app:title_text_size="@dimen/text_title_size"
+        app:content_padding="@dimen/button_roundness"
+        app:content_text_color="#ffffff"
+        app:content_text_size="@dimen/item_margin"
+        app:link_text_color="#fff"
+        app:arrow_drawable="@drawable/ic_arrow_"
+        app:bg_drawable_regular="@drawable/bg_first_dropdown_text_view_regular"
+        app:bg_drawable_expanded="@drawable/bg_first_dropdown_text_view_expanded"
+        app:expand_duration="1"
+        app:panel_padding="@dimen/item_margin"/>
+
+<!--    <TextView-->
+<!--        android:id="@+id/itemDateTime"-->
+<!--        style="@style/ISZHTheme.Text"-->
+<!--        tools:text="Заемщик:" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/itemDateTimeText"-->
+<!--        style="@style/ISZHTheme.TextTitle"-->
+<!--        android:textSize="@dimen/text_size_items"-->
+<!--        tools:text="Идрисова Карлыгаш Анаурбековна" />-->
+
+<!--    <View-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="1dp"-->
+<!--        android:layout_marginTop="@dimen/edit_stoke"-->
+<!--        android:background="@color/ppkGrey" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/itemOwner"-->
+<!--        style="@style/ISZHTheme.Text"-->
+<!--        android:layout_marginTop="@dimen/text_badge_padding_horizontal"-->
+<!--        tools:text="Залогодатель:" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/itemOwnerText"-->
+<!--        style="@style/ISZHTheme.TextTitle"-->
+<!--        android:textSize="@dimen/text_size_items"-->
+<!--        tools:text="Идрисова Карлыгаш Анаурбековна" />-->
+<!--    <View-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="1dp"-->
+<!--        android:layout_marginTop="@dimen/edit_stoke"-->
+<!--        android:background="@color/ppkGrey" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/itemOldInj"-->
+<!--        style="@style/ISZHTheme.Text"-->
+<!--        android:layout_marginTop="@dimen/text_badge_padding_horizontal"-->
+<!--        tools:text="Залогодержатель:" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/itemOldInjText"-->
+<!--        style="@style/ISZHTheme.TextTitle"-->
+<!--        android:textSize="@dimen/text_size_items"-->
+<!--        tools:text="Сансей Асыл-Сери Шарипулы" />-->
+<!--    <View-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="1dp"-->
+<!--        android:layout_marginTop="@dimen/edit_stoke"-->
+<!--        android:background="@color/ppkGrey" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/itemRegNum"-->
+<!--        style="@style/ISZHTheme.Text"-->
+<!--        android:layout_marginTop="@dimen/text_badge_padding_horizontal"-->
+<!--        tools:text="Регистрационный номер:" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/itemRegNumText"-->
+<!--        style="@style/ISZHTheme.TextTitle"-->
+<!--        android:textSize="@dimen/text_size_items"-->
+<!--        tools:text="1111111111" />-->
+<!--    <View-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="1dp"-->
+<!--        android:layout_marginTop="@dimen/edit_stoke"-->
+<!--        android:background="@color/ppkGrey" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/itemContractNum"-->
+<!--        style="@style/ISZHTheme.Text"-->
+<!--        android:layout_marginTop="@dimen/text_badge_padding_horizontal"-->
+<!--        tools:text="Номер договора:" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/itemContractNumText"-->
+<!--        style="@style/ISZHTheme.TextTitle"-->
+<!--        android:textSize="@dimen/text_size_items"-->
+<!--        tools:text="12121232" />-->
+<!--    <View-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="1dp"-->
+<!--        android:layout_marginTop="@dimen/edit_stoke"-->
+<!--        android:background="@color/ppkGrey" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/itemStartDate"-->
+<!--        style="@style/ISZHTheme.Text"-->
+<!--        android:layout_marginTop="@dimen/text_badge_padding_horizontal"-->
+<!--        tools:text="Дата заключения договора:" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/itemStartDateText"-->
+<!--        style="@style/ISZHTheme.TextTitle"-->
+<!--        android:textSize="@dimen/text_size_items"-->
+<!--        tools:text="12-03-2022" />-->
+<!--    <View-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="1dp"-->
+<!--        android:layout_marginTop="@dimen/edit_stoke"-->
+<!--        android:background="@color/ppkGrey" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/itemEndDate"-->
+<!--        style="@style/ISZHTheme.Text"-->
+<!--        android:layout_marginTop="@dimen/text_badge_padding_horizontal"-->
+<!--        tools:text="Дата прекращения договора:" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/itemEndDateText"-->
+<!--        style="@style/ISZHTheme.TextTitle"-->
+<!--        android:textSize="@dimen/text_size_items"-->
+<!--        tools:text="12-03-2022" />-->
+<!--    <View-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="1dp"-->
+<!--        android:layout_marginTop="@dimen/edit_stoke"-->
+<!--        android:background="@color/ppkGrey" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/itemLoanAmount"-->
+<!--        style="@style/ISZHTheme.Text"-->
+<!--        android:layout_marginTop="@dimen/text_badge_padding_horizontal"-->
+<!--        tools:text="Сумма займа:" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/itemLoanAmountText"-->
+<!--        style="@style/ISZHTheme.TextTitle"-->
+<!--        android:textSize="@dimen/text_size_items"-->
+<!--        tools:text="00000000" />-->
+<!--    <View-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="1dp"-->
+<!--        android:layout_marginTop="@dimen/edit_stoke"-->
+<!--        android:background="@color/ppkGrey" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/itemComment"-->
+<!--        style="@style/ISZHTheme.Text"-->
+<!--        android:layout_marginTop="@dimen/text_badge_padding_horizontal"-->
+<!--        tools:text="Примечание:" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/itemCommentText"-->
+<!--        style="@style/ISZHTheme.TextTitle"-->
+<!--        android:textSize="@dimen/text_size_items"-->
+<!--        tools:text="@string/app_gps_permission_denied" />-->
+
+</LinearLayout>

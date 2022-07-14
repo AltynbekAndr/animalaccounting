@@ -1,0 +1,582 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutRvl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="kz.putinbyte.iszhfermer.ui.rvl.create.CreateInventoryFragment"
+    tools:ignore="MissingConstraints">
+
+    <RelativeLayout
+        android:id="@+id/block"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/end"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/block">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/asteriskCreateSickness"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/layoutCreateSickness"
+                app:layout_constraintEnd_toStartOf="@+id/layoutCreateSickness"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/layoutCreateSickness" />
+
+            <LinearLayout
+                android:id="@+id/layoutCreateSickness"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteY="14dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_sickness"
+                    android:textColor="@color/ppkBlack"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:id="@+id/layoutCreate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/circle_primary_background_grey"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textCreate"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:drawableEnd="@drawable/ic_angle_down"
+                        android:padding="10dp"
+                        android:text="@string/make_choice"
+                        android:textColor="@color/ppkBlack"
+                        android:textSize="16sp"
+                        android:visibility="visible"
+                        tools:ignore="UseCompatTextViewDrawableXml" />
+
+                    <LinearLayout
+                        android:id="@+id/layoutRecycler"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recyclerViewCreateSickness"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawableEnd="@drawable/ic_angle_down"
+                            android:padding="5dp"
+                            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                            app:spanCount="2" />
+
+                        <ImageView
+                            android:id="@+id/imageRecycler"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="16dp"
+                            android:src="@drawable/ic_angle_down" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/asteriskSampleTypeSpinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/createGetSampleTypeSpinner"
+                app:layout_constraintEnd_toStartOf="@+id/createGetSampleTypeSpinner"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/createGetSampleTypeSpinner" />
+
+            <kz.putinbyte.iszhfermer.ui.views.IszhSpinner
+                android:id="@+id/createGetSampleTypeSpinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:textTitleSpinner="Принимаемый образец" />
+
+            <TextView
+                android:id="@+id/asteriskDoctorType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/layoutDoctorType"
+                app:layout_constraintEnd_toStartOf="@+id/layoutDoctorType"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/layoutDoctorType" />
+
+            <LinearLayout
+                android:id="@+id/layoutDoctorType"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteY="14dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_doctor"
+                    android:textColor="@color/ppkBlack"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:id="@+id/layoutCreateDoctorType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/circle_primary_background_grey"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textCreateDoctorType"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:drawableEnd="@drawable/ic_angle_down"
+                        android:padding="10dp"
+                        android:text="@string/make_choice"
+                        android:textColor="@color/ppkBlack"
+                        android:textSize="16sp"
+                        android:visibility="visible"
+                        tools:ignore="UseCompatTextViewDrawableXml" />
+
+                    <LinearLayout
+                        android:id="@+id/layoutRecyclerDoctorType"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recyclerViewCreateDoctorType"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawableEnd="@drawable/ic_angle_down"
+                            android:padding="5dp"
+                            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                            app:spanCount="2" />
+
+                        <ImageView
+                            android:id="@+id/imageRecyclerDoctorType"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="16dp"
+                            android:src="@drawable/ic_angle_down" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/asteriskBranchTypeSpinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/createBranchTypeSpinner"
+                app:layout_constraintEnd_toStartOf="@+id/createBranchTypeSpinner"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/createBranchTypeSpinner" />
+
+            <kz.putinbyte.iszhfermer.ui.views.IszhSpinner
+                android:id="@+id/createBranchTypeSpinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:textTitleSpinner="Филиал лаборатории и пунктов приема проб" />
+
+            <LinearLayout
+                android:id="@+id/layoutMaterialsType"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/spentMaterials"
+                    android:textColor="@color/ppkBlack"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:id="@+id/layoutMaterialsTypes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/circle_primary_background_grey"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textCreateMaterialsType"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:drawableEnd="@drawable/ic_angle_down"
+                        android:padding="10dp"
+                        android:text="@string/make_choice"
+                        android:textColor="@color/ppkBlack"
+                        android:textSize="16sp"
+                        android:visibility="visible"
+                        tools:ignore="UseCompatTextViewDrawableXml" />
+
+                    <LinearLayout
+                        android:id="@+id/layoutRecyclerMaterialsType"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recyclerViewMaterialsType"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawableEnd="@drawable/ic_angle_down"
+                            android:padding="5dp"
+                            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                            app:spanCount="2" />
+
+                        <ImageView
+                            android:id="@+id/imageRecyclerMaterialsType"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="16dp"
+                            android:src="@drawable/ic_angle_down" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/asteriskNumDocEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/createNumDocEdit"
+                app:layout_constraintEnd_toStartOf="@+id/createNumDocEdit"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/createNumDocEdit" />
+
+            <EditText
+                android:id="@+id/createNumDocEdit"
+                style="@style/ISZHTheme.EditText"
+                android:layout_width="0dp"
+                android:layout_marginTop="@dimen/top_screen_padding"
+                android:hint="@string/docNumber"
+                android:inputType="number"
+                android:textSize="15sp"
+                android:visibility="visible"
+                android:autofillHints="" />
+
+            <TextView
+                android:id="@+id/asteriskClinicPictureEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/createClinicPictureEdit"
+                app:layout_constraintEnd_toStartOf="@+id/createClinicPictureEdit"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/createClinicPictureEdit" />
+
+            <EditText
+                android:id="@+id/createClinicPictureEdit"
+                style="@style/ISZHTheme.EditText"
+                android:layout_width="0dp"
+                android:layout_marginTop="@dimen/top_screen_padding"
+                android:hint="@string/clinicPicture"
+                android:textSize="15sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/asteriskGuessDiagnosisEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/createGuessDiagnosisEdit"
+                app:layout_constraintEnd_toStartOf="@+id/createGuessDiagnosisEdit"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/createGuessDiagnosisEdit" />
+
+            <EditText
+                android:id="@+id/createGuessDiagnosisEdit"
+                style="@style/ISZHTheme.EditText"
+                android:layout_width="0dp"
+                android:layout_marginTop="@dimen/top_screen_padding"
+                android:hint="@string/preDiagnosis"
+                android:textSize="15sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/asteriskPathologicalDataEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/createPathologicalDataEdit"
+                app:layout_constraintEnd_toStartOf="@+id/createPathologicalDataEdit"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/createPathologicalDataEdit" />
+
+            <EditText
+                android:id="@+id/createPathologicalDataEdit"
+                style="@style/ISZHTheme.EditText"
+                android:layout_width="0dp"
+                android:layout_marginTop="@dimen/top_screen_padding"
+                android:hint="@string/pathological"
+                android:textSize="15sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/asteriskThrowExceptionEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/createThrowExceptionEdit"
+                app:layout_constraintEnd_toStartOf="@+id/createThrowExceptionEdit"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/createThrowExceptionEdit" />
+
+            <EditText
+                android:id="@+id/createThrowExceptionEdit"
+                style="@style/ISZHTheme.EditText"
+                android:layout_width="0dp"
+                android:layout_marginTop="@dimen/top_screen_padding"
+                android:hint="@string/throwException"
+                android:inputType="textMultiLine"
+                android:textSize="15sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/asteriskPathologicalMaterialEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/createPathologicalMaterialEdit"
+                app:layout_constraintEnd_toStartOf="@+id/createPathologicalMaterialEdit"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/createPathologicalMaterialEdit" />
+
+            <EditText
+                android:id="@+id/createPathologicalMaterialEdit"
+                style="@style/ISZHTheme.EditText"
+                android:layout_width="0dp"
+                android:layout_marginTop="@dimen/top_screen_padding"
+                android:hint="@string/pathologicalMaterials"
+                android:inputType="textMultiLine"
+                android:textSize="15sp"
+                android:visibility="gone"
+                android:importantForAutofill="no" />
+
+            <EditText
+                android:id="@+id/createInThePresenceEdit"
+                style="@style/ISZHTheme.EditText"
+                android:layout_width="0dp"
+                android:layout_marginTop="@dimen/top_screen_padding"
+                android:hint="@string/withSomebody"
+                android:textSize="15sp"
+                android:visibility="gone"
+                android:importantForAutofill="no" />
+
+            <TextView
+                android:id="@+id/asteriskNumDocDateEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/researchDateEdit"
+                app:layout_constraintEnd_toStartOf="@+id/researchDateEdit"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/researchDateEdit" />
+
+            <kz.putinbyte.iszhfermer.ui.views.IszhEditDateCurrent
+                android:id="@+id/researchDateEdit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:background="@drawable/edt_bg"
+                android:paddingStart="16dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="10dp"
+                app:textTitleDateNumber="Дата документа"
+                tools:ignore="RtlSymmetry" />
+
+            <TextView
+                android:id="@+id/asteriskStartDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/createStartDate"
+                app:layout_constraintEnd_toStartOf="@+id/createStartDate"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/createStartDate" />
+
+            <kz.putinbyte.iszhfermer.ui.views.IszhEditDateCurrent
+                android:id="@+id/createStartDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:background="@drawable/edt_bg"
+                android:paddingStart="16dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="10dp"
+                android:visibility="gone"
+                app:textTitleDateNumber="Дата взятия крови(начальная дата)" />
+
+            <TextView
+                android:id="@+id/asteriskEndDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/createEndDate"
+                app:layout_constraintEnd_toStartOf="@+id/createEndDate"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/createEndDate" />
+
+            <kz.putinbyte.iszhfermer.ui.views.IszhEditDateCurrent
+                android:id="@+id/createEndDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:background="@drawable/edt_bg"
+                android:paddingStart="16dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="10dp"
+                android:visibility="gone"
+                app:textTitleDateNumber="Дата взятия крови(конечная дата)" />
+
+            <TextView
+                android:id="@+id/asteriskSicknessDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/createSicknessDate"
+                app:layout_constraintEnd_toStartOf="@+id/createSicknessDate"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/createSicknessDate" />
+
+            <kz.putinbyte.iszhfermer.ui.views.IszhEditDateCurrent
+                android:id="@+id/createSicknessDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:background="@drawable/edt_bg"
+                android:paddingStart="16dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="10dp"
+                android:visibility="gone"
+                app:textTitleDateNumber="Дата заболевания" />
+
+            <TextView
+                android:id="@+id/asteriskDeadDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/createDeadDate"
+                app:layout_constraintEnd_toStartOf="@+id/createDeadDate"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/createDeadDate" />
+
+            <kz.putinbyte.iszhfermer.ui.views.IszhEditDateCurrent
+                android:id="@+id/createDeadDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:background="@drawable/edt_bg"
+                android:paddingStart="16dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="10dp"
+                android:visibility="gone"
+                app:textTitleDateNumber="Дата падежа" />
+
+            <TextView
+                android:id="@+id/asteriskSendingMaterialDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/createSendingMaterialDate"
+                app:layout_constraintEnd_toStartOf="@+id/createSendingMaterialDate"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/createSendingMaterialDate" />
+
+            <kz.putinbyte.iszhfermer.ui.views.IszhEditDateCurrent
+                android:id="@+id/createSendingMaterialDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:background="@drawable/edt_bg"
+                android:paddingStart="16dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="10dp"
+                android:visibility="gone"
+                app:textTitleDateNumber="Дата отправки материала" />
+
+            <androidx.constraintlayout.helper.widget.Flow
+                android:id="@+id/flow"
+                style="@style/ISZHTheme.Flow"
+                android:orientation="horizontal"
+                app:constraint_referenced_ids="
+                layoutCreateSickness,
+                createGetSampleTypeSpinner,
+                layoutDoctorType,
+                createBranchTypeSpinner,
+                layoutMaterialsType,
+                createInThePresenceEdit,
+                createClinicPictureEdit,
+                createGuessDiagnosisEdit,
+                createPathologicalDataEdit,
+                createThrowExceptionEdit,
+                createPathologicalMaterialEdit,
+                createNumDocEdit,
+                researchDateEdit,
+                createStartDate,
+                createEndDate,
+                createSicknessDate,
+                createDeadDate,
+                createSendingMaterialDate"
+                app:flow_maxElementsWrap="1"
+                tools:layout_editor_absoluteY="14dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/end"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/screen_padding"
+        android:paddingEnd="@dimen/screen_padding"
+        android:paddingBottom="@dimen/screen_padding"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <Button
+            android:id="@+id/createSaveButton"
+            style="@style/ISZHTheme.ButtonSelect"
+            android:layout_marginTop="10dp"
+            android:text="Далее"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

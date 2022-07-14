@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_home"
+        android:icon="@drawable/ic_baseline_format_list_bulleted_24"
+        android:title="На главную" />
+
+    <item
+        android:id="@+id/menu_user"
+        android:icon="@drawable/ic_user"
+        android:title="Сотрудник" />
+
+    <item
+        android:id="@+id/menu_notification"
+        android:icon="@drawable/ic_notifications"
+        android:title="Уведомление" />
+
+    <item
+        android:id="@+id/menu_logout"
+        android:icon="@drawable/ic_logout"
+        android:title="Выйти" />
+
+</menu>

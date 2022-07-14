@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/detailFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="kz.putinbyte.iszhfermer.ui.animal.detail.IszhDetailFragment"
+    tools:ignore="MissingConstraints">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/detailInfoContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shadow_background"
+            android:padding="@dimen/item_margin">
+
+            <TextView
+                android:id="@+id/detailAnimalInfo"
+                style="@style/ISZHTheme.TextTitle"
+                android:text="@string/aboutAnimal"
+                android:textSize="@dimen/text_title_size" />
+
+            <TextView
+                android:id="@+id/detailAnimalInfoText"
+                style="@style/ISZHTheme.Text"
+                android:layout_marginTop="@dimen/item_margin"
+                app:layout_constraintTop_toBottomOf="@+id/detailAnimalInfo"
+                tools:text="Вид животного" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/detailRegistrationContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shadow_background"
+            android:padding="@dimen/item_margin">
+
+            <TextView
+                android:id="@+id/detailRegistration"
+                style="@style/ISZHTheme.TextTitle"
+                android:layout_width="0dp"
+                android:text="@string/detailRegistration"
+                android:textSize="@dimen/text_size" />
+
+            <TextView
+                android:id="@+id/detailRegistrationText"
+                style="@style/ISZHTheme.Text"
+                android:layout_width="0dp"
+                android:layout_marginTop="@dimen/item_margin"
+                app:layout_constraintTop_toBottomOf="@+id/detailRegistration"
+                tools:text="Причина" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/detailImportContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shadow_background"
+            android:padding="@dimen/item_margin">
+
+            <TextView
+                android:id="@+id/detailAboutImport"
+                style="@style/ISZHTheme.TextTitle"
+                android:layout_width="0dp"
+                android:text="@string/aboutImport"
+                android:textSize="@dimen/text_size" />
+
+            <TextView
+                android:id="@+id/detailAboutImportText"
+                style="@style/ISZHTheme.Text"
+                android:layout_width="0dp"
+                android:layout_marginTop="@dimen/item_margin"
+                app:layout_constraintTop_toBottomOf="@+id/detailAboutImport"
+                tools:text="Импорт" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/detailBreedingContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shadow_background"
+            android:padding="@dimen/item_margin">
+
+            <TextView
+                android:id="@+id/detailBreedingAnimal"
+                style="@style/ISZHTheme.TextTitle"
+                android:layout_width="0dp"
+                android:text="@string/breedingAnimal"
+                android:textSize="@dimen/text_size" />
+
+            <TextView
+                android:id="@+id/detailBreedingAnimalText"
+                style="@style/ISZHTheme.Text"
+                android:layout_width="0dp"
+                android:layout_marginTop="@dimen/item_margin"
+                app:layout_constraintTop_toBottomOf="@+id/detailBreedingAnimal"
+                tools:text="Племенное животное" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <kz.putinbyte.iszhfermer.ui.views.IszhButton
+            android:id="@+id/detailIssuedInjButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:textTitleBtn="Выданные ИНЖ" />
+
+        <kz.putinbyte.iszhfermer.ui.views.IszhButton
+            android:id="@+id/detailSicknessesButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:textTitleBtn="Болезни" />
+
+        <kz.putinbyte.iszhfermer.ui.views.IszhButton
+            android:id="@+id/detailResearchButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:textTitleBtn="Исследование" />
+
+        <kz.putinbyte.iszhfermer.ui.views.IszhButton
+            android:id="@+id/detailPreventionButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:textTitleBtn="Профилактика" />
+
+        <kz.putinbyte.iszhfermer.ui.views.IszhButton
+            android:id="@+id/detailDepositButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:textTitleBtn="Залог" />
+
+        <kz.putinbyte.iszhfermer.ui.views.IszhButton
+            android:id="@+id/detailFatteningButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:textTitleBtn="Откорм" />
+
+        <kz.putinbyte.iszhfermer.ui.views.IszhButton
+            android:id="@+id/detailHistoryButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:textTitleBtn="История" />
+
+        <kz.putinbyte.iszhfermer.ui.views.IszhButton
+            android:id="@+id/detailDiagnosisButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:textTitleBtn="Диагностическая оценка" />
+
+        <Button
+            android:id="@+id/detailDeleteButton"
+            style="@style/ISZHTheme.ButtonDanger"
+            android:visibility="gone"
+            android:text="@string/iszh_delete_button" />
+
+        <Button
+            android:id="@+id/detailEditButton"
+            style="@style/ISZHTheme.ButtonPrimary"
+            android:visibility="gone"
+            android:text="@string/iszh_edit_button" />
+
+        <androidx.constraintlayout.helper.widget.Flow
+            style="@style/ISZHTheme.Flow"
+            android:orientation="horizontal"
+            app:constraint_referenced_ids="
+                detailInfoContainer,
+                detailRegistrationContainer,
+                detailImportContainer,
+                detailBreedingContainer,
+                detailIssuedInjButton,
+                detailSicknessesButton,
+                detailResearchButton,
+                detailPreventionButton,
+                detailDepositButton,
+                detailFatteningButton,
+                detailHistoryButton,
+                detailDiagnosisButton,
+                detailEditButton,
+                detailDeleteButton"
+            app:flow_maxElementsWrap="1" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/text_margin"
+    android:background="@drawable/box_grey_selector"
+    android:paddingTop="10dp"
+    android:paddingStart="@dimen/box_padding"
+    android:paddingEnd="@dimen/box_padding"
+    android:paddingBottom="@dimen/box_padding">
+
+    <TextView
+        android:id="@+id/region_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_default_size"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        android:gravity="center_horizontal"
+        android:textColor="@color/ppkBlack"
+        tools:text="АКМОЛИНСКАЯ ОБЛАСТЬ" />
+
+    <TextView
+        android:id="@+id/region_krs"
+        style="@style/ISZHTheme.Text"
+        android:layout_width="0dp"
+        android:layout_marginTop="@dimen/item_margin"
+        android:text="@string/krsText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/region_name" />
+
+    <TextView
+        android:id="@+id/region_krs_value"
+        style="@style/ISZHTheme.TextTitle"
+        android:layout_width="0dp"
+        android:layout_marginStart="28sp"
+        app:layout_constraintStart_toEndOf="@+id/region_krs"
+        app:layout_constraintTop_toTopOf="@+id/region_krs"
+        tools:text="33333" />
+
+    <TextView
+        android:id="@+id/region_camels"
+        style="@style/ISZHTheme.Text"
+        android:layout_marginEnd="@dimen/button_min_width"
+        android:text="@string/camels"
+        app:layout_constraintEnd_toStartOf="@+id/region_camels_value"
+        app:layout_constraintStart_toStartOf="@+id/region_oneHoofed"
+        app:layout_constraintTop_toTopOf="@id/region_krs" />
+
+    <TextView
+        android:id="@+id/region_camels_value"
+        style="@style/ISZHTheme.TextTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/region_camels"
+        tools:text="1223" />
+
+    <TextView
+        android:id="@+id/region_pork"
+        style="@style/ISZHTheme.Text"
+        android:text="@string/pork"
+        app:layout_constraintStart_toStartOf="@+id/region_camels"
+        app:layout_constraintTop_toTopOf="@id/region_horses" />
+
+    <TextView
+        android:id="@+id/region_pork_value"
+        style="@style/ISZHTheme.TextTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/region_pork"
+        tools:text="3444" />
+
+    <TextView
+        android:id="@+id/region_oneHoofed"
+        style="@style/ISZHTheme.Text"
+        android:layout_marginEnd="@dimen/text_margin"
+        android:text="@string/oneHoofed"
+        app:layout_constraintStart_toStartOf="@+id/region_camels"
+        app:layout_constraintTop_toTopOf="@id/region_mrs" />
+
+    <TextView
+        android:id="@+id/region_one_hoofed_value"
+        style="@style/ISZHTheme.TextTitle"
+        android:layout_marginStart="@dimen/text_margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/region_oneHoofed"
+        app:layout_constraintTop_toTopOf="@id/region_oneHoofed"
+        tools:text="344442" />
+
+    <TextView
+        android:id="@+id/region_horses"
+        style="@style/ISZHTheme.Text"
+        android:layout_width="0dp"
+        android:layout_marginTop="@dimen/text_margin"
+        android:text="@string/horses"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/region_krs" />
+
+    <TextView
+        android:id="@+id/region_horses_value"
+        style="@style/ISZHTheme.TextTitle"
+        android:layout_width="0dp"
+        app:layout_constraintStart_toStartOf="@+id/region_krs_value"
+        app:layout_constraintTop_toTopOf="@+id/region_horses"
+        tools:text="333333" />
+
+    <TextView
+        android:id="@+id/region_mrs"
+        style="@style/ISZHTheme.Text"
+        android:layout_width="0dp"
+        android:layout_marginTop="@dimen/text_margin"
+        android:text="@string/mrs"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/region_horses" />
+
+    <TextView
+        android:id="@+id/region_mrs_value"
+        style="@style/ISZHTheme.TextTitle"
+        android:layout_width="0dp"
+        app:layout_constraintStart_toStartOf="@+id/region_krs_value"
+        app:layout_constraintTop_toTopOf="@+id/region_mrs"
+        tools:text="5555" />
+    <Button
+        android:id="@+id/region_add_animal_button"
+        style="@style/ISZHTheme.ButtonPrimary"
+        android:layout_marginTop="@dimen/item_margin"
+        android:drawableStart="@drawable/ic_add"
+        android:text="@string/addAnimal"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/region_mrs" />
+    <Button
+        android:id="@+id/region_owners_button"
+        style="@style/ISZHTheme.ButtonPrimary"
+        android:layout_marginStart="@dimen/item_margin"
+        android:layout_marginTop="@dimen/item_margin"
+        android:text="@string/owners"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/region_add_animal_button"
+        app:layout_constraintTop_toBottomOf="@+id/region_mrs" />
+
+    <Button
+        android:id="@+id/region_next_level"
+        style="@style/ISZHTheme.ButtonPrimary"
+        android:layout_marginTop="@dimen/item_margin"
+        android:text="@string/nextLevel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/region_mrs_value" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

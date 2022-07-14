@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context="kz.putinbyte.iszhfermer.ui.rvl.RvlListFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/scroller"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent">
+
+            <LinearLayout
+                android:id="@+id/layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <kz.putinbyte.iszhfermer.ui.views.IszhSpinner
+                    android:id="@+id/rvlKatoObSpinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/item_margin"
+                    app:textTitleSpinner="Выберите область" />
+
+                <kz.putinbyte.iszhfermer.ui.views.IszhSpinner
+                    android:id="@+id/rvlKatoRgSpinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/item_margin"
+                    android:visibility="gone"
+                    app:textTitleSpinner="Выберите регион" />
+
+                <kz.putinbyte.iszhfermer.ui.views.IszhSpinner
+                    android:id="@+id/rvlKatoCiRgSpinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/item_margin"
+                    android:visibility="gone"
+                    app:textTitleSpinner="Выберите город" />
+
+                <kz.putinbyte.iszhfermer.ui.views.IszhSpinner
+                    android:id="@+id/rvlAnimalKindSpinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/item_margin"
+                    app:textTitleSpinner="Выберите вид животного" />
+
+                <Button
+                    android:id="@+id/rvlAnimalSlaughter"
+                    style="@style/ISZHTheme.ButtonPrimary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/item_margin"
+                    android:text="Животные на санитарном убое"
+                    app:layout_constraintEnd_toEndOf="@+id/layout"
+                    app:layout_constraintStart_toStartOf="@+id/layout"
+                    app:layout_constraintTop_toBottomOf="@+id/layout" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvlListRec"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clipToPadding="false"
+                    android:nestedScrollingEnabled="false"
+                    android:paddingTop="@dimen/item_margin"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:listitem="@layout/item_rvl" />
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <LinearLayout
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/circle_primary_background_seeing_saving"
+            app:layout_constraintBottom_toTopOf="@+id/searchFloat"
+            app:layout_constraintRight_toRightOf="parent">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                app:cardCornerRadius="50dp">
+
+                <TextView
+                    android:id="@+id/rvlSaveItemsIm"
+                    android:layout_width="46dp"
+                    android:layout_height="46dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/circle_primary_background_seeing_saving"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/ppkWhite"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/searchFloat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:backgroundTint="@color/darkGreen"
+            android:src="@drawable/ic_baseline_search_24"
+            app:maxImageSize="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:ignore="ContentDescription" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_margin"
+            android:background="@drawable/rec_bottom_gradient"
+            app:layout_constraintBottom_toBottomOf="@+id/layout" />
+
+        <Button
+            android:id="@+id/rvlSendToRvlButton"
+            style="@style/ISZHTheme.ButtonSelect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:text="Печать/Отправить в РВЛ"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/layout"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/layout" />
+    </LinearLayout>
+</LinearLayout>

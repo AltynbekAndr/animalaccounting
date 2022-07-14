@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="operator_start_text">Дата начала</string>
+    <string name="operator_end_text">Дата окончания</string>
+    <string name="operator_add_button">Добавить запись</string>
+    <string name="offline_owners_upload_owners">Подгрузить новое</string>
+    <string name="operator_search_edit">
+        Наименование или ИНН</string>
+    <string name="operator_search_type">
+        Тип владельца</string>
+    <string name="operator_save_button">
+        Сохранить</string>
+    <string name="operator_data">Полное наименование\n%s\n\n
+ОГРН\n%s\n\n
+ИНН\n%s\n\n
+Адрес\n%s
+    </string>
+    <!--    Физлицо    -->
+    <string name="operator_fullname">
+        Полное наименование</string>
+    <string name="operator_inn">
+        ИНН</string>
+    <string name="operator_fio">
+        ФИО</string>
+    <string name="operator_reg_address">
+        Адрес регистрации по месту жительства</string>
+    <string name="operator_passport_num">
+        Номер паспорта</string>
+    <string name="operator_passport_serial">
+        Серия паспорта</string>
+    <string name="operator_passport_date">
+        Дата выдачи паспорта</string>
+    <string name="operator_email">
+        Электронная почта</string>
+    <string name="operator_phone">
+        Номер телефона</string>
+</resources>

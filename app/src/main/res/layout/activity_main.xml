@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ppkWhite"
+    tools:context="kz.putinbyte.iszhfermer.ui.main.MainActivity">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/ppkPrimary"
+        app:layout_constraintBottom_toBottomOf="@id/mainBackButton"
+        app:layout_constraintTop_toTopOf="@id/mainBackButton"/>
+
+    <kz.putinbyte.iszhfermer.ui.views.IconButton
+        android:id="@+id/mainBackButton"
+        style="@style/ISZHTheme.ButtonWhite"
+        android:text="@string/icon_angle_left"
+        android:background="@color/ppkPrimary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <kz.putinbyte.iszhfermer.ui.views.IconButton
+        android:id="@+id/mainNotificationButton"
+        style="@style/ISZHTheme.ButtonWhite"
+        android:text="@string/icon_notification"
+        android:background="@color/ppkPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/mainTitle"
+        style="@style/ISZHTheme.TextTitle"
+        tools:text="@string/app_sample_text"
+        android:textColor="@color/ppkWhite"
+        app:layout_constraintBottom_toBottomOf="@id/mainBackButton"
+        app:layout_constraintStart_toEndOf="@id/mainBackButton"
+        app:layout_constraintTop_toTopOf="@id/mainBackButton" />
+
+    <FrameLayout
+        android:id="@+id/mainFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mainBackButton" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutGeneral"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:padding="2dp"
+    android:layout_margin="6dp"
+    android:background="@color/ppkGreyLight"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/diseaseGeneralTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="11sp"
+        android:layout_weight="1"
+        android:paddingStart="2dp"
+        android:layout_gravity="center"
+        android:text="Море"
+        tools:ignore="HardcodedText" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/diseaseGeneralImageView"
+        android:tint="@color/ppkGrey"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_baseline_close_24"/>
+</LinearLayout>
